@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import './mainHeader.css';
 import { NavLink } from 'react-router-dom';
+=======
+import '../mainHeader/mainHeader.css';
+import { NavLink } from "react-router-dom";
+>>>>>>> acfd48a9ef12880043e954282ef538a1ae8ecddd
 import logo from '../../assets/images/main/logo.svg';
 import phone from '../../assets/images/main/header-phone-icon.svg';
 
