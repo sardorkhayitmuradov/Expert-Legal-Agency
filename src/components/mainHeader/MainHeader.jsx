@@ -1,8 +1,8 @@
 import React from 'react';
 import '../mainHeader/mainHeader.css';
 import { NavLink } from "react-router-dom";
-import logo from '../../assets/images/logo.svg';
-import phone from '../../assets/images/header-phone-icon.svg';
+import logo from '../../assets/images/main/logo.svg';
+import phone from '../../assets/images/main/header-phone-icon.svg';
 
 const MainHeader = () => {
   return (
