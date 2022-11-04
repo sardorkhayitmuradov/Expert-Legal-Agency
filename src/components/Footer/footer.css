@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer {
+       width: 100%;
+       height: max-content;
+
+       background: #073BA1;
+       padding: 50px 0;
+}
+
+.footer_container {
+       width: 1180px;
+       margin: 0 auto;
+}

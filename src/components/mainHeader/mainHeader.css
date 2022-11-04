@@ -59,6 +59,7 @@ nav{
        background: #073BA1;
        border: none;
        color: #fff;
+       cursor: pointer;
 }
 
 .sign_up button {
@@ -68,11 +69,13 @@ nav{
        border-radius: 8px;
        color: #fff;
        border: none;
+       cursor: pointer;
 }
 
 .phone_comp{
        display: flex;
        gap: 10px;
+       cursor: pointer;
 }
 
 .phone_comp img {
