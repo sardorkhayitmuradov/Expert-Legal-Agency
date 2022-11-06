@@ -1,6 +1,7 @@
 import React from 'react';
 import MainHeader from '../../components/mainHeader/MainHeader';
 import Footer from '../../components/Footer/Footer';
+import MainAside from '../../components/MainAside/MainAside';
 
 const Main = () => {
   return (
@@ -11,6 +12,10 @@ const Main = () => {
       <main className='main'>
         
       </main>
+
+      <aside className='aside'>
+        <MainAside/>
+      </aside>
       <footer className='footer'>
     <Footer/>
       </footer>
