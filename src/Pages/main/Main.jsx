@@ -1,5 +1,6 @@
 import React from 'react';
 import MainHeader from '../../components/mainHeader/MainHeader';
+import Footer from '../../components/Footer/Footer';
 
 const Main = () => {
   return (
@@ -10,6 +11,9 @@ const Main = () => {
       <main className='main'>
         
       </main>
+      <footer className='footer'>
+    <Footer/>
+      </footer>
     </>
   );
 };
