@@ -5,8 +5,9 @@ import Footer from '../../components/Footer/Footer';
 import MainAside from '../../components/MainAside/MainAside';
 import MainOrder from '../../components/mainOrder/mainOrder';
 import MainRating from '../../components/mainRating/mainRating';
-import './Main.css'
 import MainFaceRating from '../../components/mainFaceRating/mainFaceRating';
+import MainService from '../../components/mainService/MainService';
+import './Main.css'
 
 const Main = () => {
   return (
@@ -37,6 +38,9 @@ const Main = () => {
         </section>
       </main>
 
+      <div className='service'>
+      <MainService/>
+      </div>
       <aside className='aside'>
         <MainAside/>
       </aside>
