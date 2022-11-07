@@ -2,6 +2,8 @@ import React from 'react';
 import MainHeader from '../../components/mainHeader/MainHeader';
 import MainHero from '../../components/mainHero/mainHero';
 import './Main.css'
+import Footer from '../../components/Footer/Footer';
+import MainAside from '../../components/MainAside/MainAside';
 
 const Main = () => {
   return (
@@ -16,6 +18,13 @@ const Main = () => {
           </div>
         </section>
       </main>
+
+      <aside className='aside'>
+        <MainAside/>
+      </aside>
+      <footer className='footer'>
+    <Footer/>
+      </footer>
     </>
   );
 };
