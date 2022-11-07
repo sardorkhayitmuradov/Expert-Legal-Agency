@@ -7,7 +7,11 @@ import MainOrder from '../../components/mainOrder/mainOrder';
 import MainRating from '../../components/mainRating/mainRating';
 import MainFaceRating from '../../components/mainFaceRating/mainFaceRating';
 import MainService from '../../components/mainService/MainService';
+<<<<<<< HEAD
+import MainAccordion from '../../components/mainAccordion/MainAccordion';
+=======
 import './Main.css'
+>>>>>>> 29e72a0c4aee7acf9710ee2c38f8a82f195c3c55
 
 const Main = () => {
   return (
@@ -37,7 +41,9 @@ const Main = () => {
           </div>
         </section>
       </main>
-
+      <div className="accordion">
+        <MainAccordion/>
+      </div>
       <div className='service'>
       <MainService/>
       </div>
