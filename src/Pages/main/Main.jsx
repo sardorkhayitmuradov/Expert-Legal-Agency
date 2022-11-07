@@ -5,6 +5,7 @@ import './Main.css'
 import Footer from '../../components/Footer/Footer';
 import MainAside from '../../components/MainAside/MainAside';
 import MainService from '../../components/mainService/MainService';
+import MainAccordion from '../../components/mainAccordion/MainAccordion';
 
 const Main = () => {
   return (
@@ -19,7 +20,9 @@ const Main = () => {
           </div>
         </section>
       </main>
-
+      <div className="accordion">
+        <MainAccordion/>
+      </div>
       <div className='service'>
       <MainService/>
       </div>
