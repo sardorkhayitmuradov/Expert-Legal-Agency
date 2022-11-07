@@ -49,6 +49,10 @@ p {
   width: 50px;
 }
 
+.main_slider_user {
+  width: 50px;
+}
+
 .main_testimonials_card_top {
   display: flex;
   gap: 30px;
