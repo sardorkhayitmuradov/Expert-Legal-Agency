@@ -7,7 +7,6 @@ import MainOrder from '../../components/mainOrder/mainOrder';
 import MainRating from '../../components/mainRating/mainRating';
 import MainFaceRating from '../../components/mainFaceRating/mainFaceRating';
 import MainService from '../../components/mainService/MainService';
-<<<<<<< HEAD
 import MainAccordion from '../../components/mainAccordion/MainAccordion';
 import './Main.css'
 
