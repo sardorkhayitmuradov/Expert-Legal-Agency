@@ -1,5 +1,7 @@
 import React from 'react';
 import MainHeader from '../../components/mainHeader/MainHeader';
+import MainHero from '../../components/mainHero/mainHero';
+import './Main.css'
 import Footer from '../../components/Footer/Footer';
 import MainAside from '../../components/MainAside/MainAside';
 import MainService from '../../components/mainService/MainService';
@@ -11,7 +13,11 @@ const Main = () => {
         <MainHeader />
       </header>
       <main className='main'>
-        
+        <section className="hero">
+          <div className="hero-container">
+            <MainHero />
+          </div>
+        </section>
       </main>
 
       <div className='service'>
