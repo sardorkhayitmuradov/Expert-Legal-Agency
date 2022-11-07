@@ -26,10 +26,12 @@ p {
 .main_slider_card1,
 .main_slider_card2,
 .main_slider_card3,
-.main_slider_card4 {
+.main_slider_card4,
+.main_slider_card5,
+.main_slider_card6
+ {
   width: 380px !important;
   height: 180px !important;
-
   padding: 20px;
   margin: 20px 0;
   background: #ffffff;
@@ -38,8 +40,13 @@ p {
   border-radius: 20px;
 }
 
+
 .main_slider_img img {
   float: right;
+}
+
+.main_slider_process{
+  width: 50px;
 }
 
 .main_testimonials_card_top {

@@ -8,6 +8,8 @@ import gavel from "../../assets/images/main/gavel.svg";
 import pen from "../../assets/images/main/signature.svg";
 import user from "../../assets/images/main/userRepeat.svg";
 import quote from "../../assets/images/main/quote.svg";
+import map from "../../assets/images/main/map.svg";
+import process from "../../assets/images/main/process.svg";
 
 const MainService = () => {
   var settings = {
@@ -98,6 +100,28 @@ const MainService = () => {
                 </div>
                 <div className="main_slider_img">
                   <img src={user} alt="User icon" />
+                </div>
+              </div>
+              <div className="main_slider_card5">
+                <div className="main_slider_texts">
+                  <h3>Отслеживание работы</h3>
+                  <p>
+                  Сервис позволяет отслеживать <br/> статус выполнения заказов
+                  </p>
+                </div>
+                <div className="main_slider_img">
+                  <img src={map} alt="Map icon" />
+                </div>
+              </div>
+              <div className="main_slider_card6">
+                <div className="main_slider_texts">
+                  <h3>Удобства для вас</h3>
+                  <p>
+                  Вам не нужно искать оценочную <br /> организацию – оценку можнo <br /> заказать онлайн
+                  </p>
+                </div>
+                <div className="main_slider_img">
+                  <img className="main_slider_process" src={process} alt="Process icon" /> <br />
                 </div>
               </div>
           </Slider>

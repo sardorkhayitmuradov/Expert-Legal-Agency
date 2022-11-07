@@ -21,8 +21,7 @@
   margin-bottom: 36px;
 }
 
-.hero-left__process,
-.hero--left__items {
+.hero-left__process {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -37,16 +37,16 @@ const Main = () => {
             <MainFaceRating />
           </div>
         </section>
-      </main>
-      <div className="accordion">
+        <section className="accordion">
         <MainAccordion/>
-      </div>
-      <div className='service'>
+      </section>
+      <section className='service'>
       <MainService/>
-      </div>
+      </section>
       <aside className='aside'>
         <MainAside/>
       </aside>
+      </main>
       <footer className='footer'>
     <Footer/>
       </footer>
