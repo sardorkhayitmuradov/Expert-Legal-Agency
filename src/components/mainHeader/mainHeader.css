@@ -1,92 +1,158 @@
-*{
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
-       list-style: none;
-       text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-nav{
-       width: 100%;
-       height: 80px;
-       padding: 10px 0;
-       background: #fff;
-       box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
-       font-family: 'Rubik', sans-serif;
+nav {
+  width: 100%;
+  height: 80px;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  font-family: "Rubik", sans-serif;
 }
 
-.main_container{
-       width: 1180px;
-       margin: 0 auto;
+.main_container {
+  width: 1180px;
+  margin: 0 auto;
 }
 
-.main_navbar{
-       display: flex;
-       justify-content: space-between;
+.main_navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
-.navbar_left_ul{
-       display: flex;
-       gap: 20px;
-
+.navbar_left_ul {
+  display: flex;
+  gap: 20px;
 }
 
-.nav_logo_content{
-       width: 200px;
-       height: 50px;
+.nav_logo_content {
+  width: 200px;
+  height: 50px;
 
-       color: #073BA1;
-       font-size: 16px;
-       font-weight: 400;
-       padding: 5px 0;
+  color: #073ba1;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px 0;
 }
 .nav_line {
-       border-left: 3px solid #073BA1;
+  border-left: 3px solid #073ba1;
 }
 
-.navbar_right_ul{
-       display: flex;
-       justify-content: space-evenly;
-       width: 50%;
-       padding: 10px 0;
+.navbar_right_ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  padding: 10px 0;
 }
 
 .sign_in button {
-       width: 95px;
-       height: 40px;
+  width: 95px;
+  height: 40px;
 
-       border-radius: 8px;
-       text-align: center;
-       background: #073BA1;
-       border: none;
-       color: #fff;
-       cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  background: #073ba1;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sign_in button:hover{
+  background: #fff;
+  color: #073ba1;
+  border: 2px solid #073ba1;
 }
 
 .sign_up button {
-       background: #EC3D5A;
-       width: 150px;
-       height: 40px;
-       border-radius: 8px;
-       color: #fff;
-       border: none;
-       cursor: pointer;
+  background: #ec3d5a;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-.phone_comp{
-       display: flex;
-       gap: 10px;
-       cursor: pointer;
+.sign_up button:hover{
+  background: #fff;
+  color: #ec3d5a;
+  border: 2px solid #ec3d5a;
+}
+
+.phone_comp {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
 }
 
 .phone_comp img {
-       width: 40px;
-       height: 40px;
-       margin-left: 30px;
+  width: 40px;
+  height: 40px;
+  margin-left: 30px;
 }
 
-.phone_number{
+.phone_number {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_form {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+.modal_form input {
+  background: #f1f6fb;
+  height: 50px;
+  padding-left: 15px;
+
+  border: 1px solid #e8eef3;
+  border-radius: 8px;
+  outline: none;
+}
+
+.modal_form p{
+       color: #042668;
+       font-size: 14px;
+}
+.modal_form_password_navigate {
+       cursor: pointer;
+       color: #073ba1;
+       font-size: 14px;
+       font-weight: 400;
+       transition: 0.5s ease;
+}
+.modal_form_password_navigate:hover {
+       font-weight: 500;
+       font-size: 15px;
+       transition: 0.5s ease;
+}
+.main_modal_form_label{
        display: flex;
-       flex-direction: column;
+       justify-content: space-between;
+}
+.main_modal_form_btn{
+  cursor: pointer;
+  background: #ec3d5a !important;
+  color: #fff !important;
+  font-size: 16px !important;
+}
+.main_modal_form_btn:hover {
+  background: #fff !important;
+  border: 2px solid #ec3d5a !important;
+  color: #ec3d5a !important;
 }
 
+.main_modal_form_p {
+  cursor: pointer;
+  padding-top: 10px;
+  text-align: center;
+  color: #073ba1;
+  font-weight: 400;
+  font-size: 16px;
+}

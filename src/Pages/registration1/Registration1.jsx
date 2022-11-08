@@ -22,12 +22,12 @@ const Registration1 = () => {
             <input type="email" placeholder="example@gmail.com" required />
             <p>uft_pole_name</p>
             <label htmlFor="#">Пароль</label>
-            <input type="text" />
+            <input type="password" />
             <p>uft_pole_name</p>
             <label className="reg1_form_hint" htmlFor="#">
               Повторите пароль
             </label>
-            <input type="text" required />
+            <input type="password" required />
             <p>uft_pole_name</p>
             <p className="reg1_form_p2">
               Нажимая на кнопку “Зарегистрироваться”, вы соглашаетесь на
