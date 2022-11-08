@@ -28,7 +28,7 @@ const MainAccordion = () => {
         </div>
         <div className="main_accordion_parent">
           <div className="main_accordion_left">
-          <img src={fqa} alt="FQA-image" />
+          <img src={fqa} alt="FQA" />
           </div>
           <div className="main_accordion_right">
             <Accordion
