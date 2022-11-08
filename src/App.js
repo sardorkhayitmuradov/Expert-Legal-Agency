@@ -26,6 +26,9 @@ import SettingSave from "./Pages/settingSave/SettingSave";
 
 
 function App() {
+  // React.useEffect(() => {
+  //   window.scrollY
+  // },[])
   return (
     <BrowserRouter>
       <Routes>

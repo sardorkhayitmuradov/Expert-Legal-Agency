@@ -99,7 +99,7 @@ const MainService = () => {
                   </p>
                 </div>
                 <div className="main_slider_img">
-                  <img src={user} alt="User icon" />
+                  <img className="main_slider_user" src={user} alt="User icon" />
                 </div>
               </div>
               <div className="main_slider_card5">

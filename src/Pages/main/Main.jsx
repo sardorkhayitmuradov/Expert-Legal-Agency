@@ -1,22 +1,22 @@
-import React from 'react';
-import MainHeader from '../../components/mainHeader/MainHeader';
-import MainHero from '../../components/mainHero/mainHero';
-import Footer from '../../components/Footer/Footer';
-import MainAside from '../../components/MainAside/MainAside';
-import MainOrder from '../../components/mainOrder/mainOrder';
-import MainRating from '../../components/mainRating/mainRating';
-import MainFaceRating from '../../components/mainFaceRating/mainFaceRating';
-import MainService from '../../components/mainService/MainService';
-import MainAccordion from '../../components/mainAccordion/MainAccordion';
-import './Main.css'
+import React from "react";
+import MainHeader from "../../components/mainHeader/MainHeader";
+import MainHero from "../../components/mainHero/mainHero";
+import Footer from "../../components/Footer/Footer";
+import MainAside from "../../components/MainAside/MainAside";
+import MainOrder from "../../components/mainOrder/mainOrder";
+import MainRating from "../../components/mainRating/mainRating";
+import MainFaceRating from "../../components/mainFaceRating/mainFaceRating";
+import MainService from "../../components/mainService/MainService";
+import MainAccordion from "../../components/mainAccordion/MainAccordion";
+import "./Main.css";
 
 const Main = () => {
   return (
     <>
-      <header className='header'>
+      <header className="header">
         <MainHeader />
       </header>
-      <main className='main'>
+      <main className="main">
         <section className="hero">
           <div className="hero-container">
             <MainHero />
@@ -38,17 +38,17 @@ const Main = () => {
           </div>
         </section>
         <section className="accordion">
-        <MainAccordion/>
-      </section>
-      <section className='service'>
-      <MainService/>
-      </section>
-      <aside className='aside'>
-        <MainAside/>
-      </aside>
+          <MainAccordion />
+        </section>
+        <section className="service">
+          <MainService />
+        </section>
+        <aside className="aside">
+          <MainAside />
+        </aside>
       </main>
-      <footer className='footer'>
-    <Footer/>
+      <footer className="footer">
+        <Footer />
       </footer>
     </>
   );
