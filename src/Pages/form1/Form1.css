@@ -1,0 +1,111 @@
+.main {
+  padding: 40px 0 120px;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form1-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.process {
+  max-width: 880px;
+  width: 100%;
+}
+
+.procces-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.process-header-image {
+  margin-right: 16px;
+}
+
+.header-title {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #073ba1;
+  margin-bottom: 10px;
+}
+
+.header-desc {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042668;
+}
+
+/* rating */
+
+.process-rating {
+    max-width: 780px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.rating-title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #042668;
+  margin-bottom: 20px;
+}
+
+.rating-radios {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    font-family: 'Rubik';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #042668;
+}
+.radio-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+input:where([type="checkbox"], [type="radio"]) {
+    width: 20px;
+    height: 20px;
+    background: #073BA1;
+    box-shadow: 0px 2px 8px rgba(7, 59, 161, 0.1);
+    margin-right: 8px;
+}
+
+/* Customer */
+
+.customer-info {
+  font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+color: #042668;
+  margin-bottom: 20px;
+}
+
+.inputs-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,58 @@
+.card {
+  max-width: 280px;
+  width: 100%;
+  padding: 30px 20px;
+  background: #FFFFFF;
+box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+border-radius: 16px;
+}
+
+.card-info {
+  margin-bottom: 40px;
+}
+
+.card-title {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #073ba1;
+  margin-bottom: 20px;
+}
+
+.card-image {
+  margin-right: 8px;
+}
+
+.card-desc-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.card-price {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-price-title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #042668;
+}
+
+.card-dollar {
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 26px;
+text-align: right;
+color: #073BA1;
+}
