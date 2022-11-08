@@ -124,13 +124,7 @@ nav {
        cursor: pointer;
        color: #073ba1;
        font-size: 14px;
-       font-weight: 400;
-       transition: 0.5s ease;
-}
-.modal_form_password_navigate:hover {
        font-weight: 500;
-       font-size: 15px;
-       transition: 0.5s ease;
 }
 .main_modal_form_label{
        display: flex;
