@@ -9,7 +9,7 @@ const Registration1 = () => {
       <div className="registration1_container">
         <div className="registration1_card">
           <div className="reg1_logo_div">
-            <img src={logo} alt="Logo-image" />
+            <img src={logo} alt="Logo" />
           </div>
           <h1>Регистрация профиля</h1>
           <form className="reg1_form" action="#">

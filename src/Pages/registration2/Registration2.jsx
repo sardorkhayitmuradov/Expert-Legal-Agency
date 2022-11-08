@@ -9,7 +9,7 @@ const Registration2 = () => {
             <div className="registration2_container">
                 <div className="registration2_card">
                     <div className="reg2_logo_div">
-                    <img src={logo} alt="Logo-image" />
+                    <img src={logo} alt="Logo" />
                     </div>
                     <h1>Заполнение профиля</h1>
                     <p className='reg2_p'>Заполните следующие поля, чтобы завершить регистрацию</p>

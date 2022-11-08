@@ -58,7 +58,7 @@ const MainHeader = () => {
                     variant="h6"
                     component="h2"
                   >
-                    <img src={logo} alt="Logo-image" />
+                    <img src={logo} alt="Logo" />
                   </Typography>
                   <Typography
                     id="modal-modal-description"
@@ -71,13 +71,6 @@ const MainHeader = () => {
                   >
                     Вход в личный кабинет
                   </Typography>
-                  <Typography
-                    sx={{
-                      paddingTop: "20px",
-                      color: "#042668",
-                      fontSize: "16px",
-                    }}
-                  >
                     <form className="modal_form" action="#">
                       <label htmlFor="#">Номер телефона</label>
                       <input
@@ -85,7 +78,7 @@ const MainHeader = () => {
                         placeholder="+7 (900) 000-00-00"
                         required
                       />
-                      <p>uft_pole_name</p>
+                      <span>uft_pole_name</span>
                       <label className="main_modal_form_label" htmlFor="#">
                         <span>Пароль</span>
                         <span
@@ -96,11 +89,10 @@ const MainHeader = () => {
                         </span>
                       </label>
                       <input type="password" required />
-                      <p>uft_pole_name</p>
+                      <span>uft_pole_name</span>
                       <input className="main_modal_form_btn" type="submit" value="Войти" />
-                      <p className="main_modal_form_p" onClick={() => navigate("/registration1")}>Регистрация</p>
+                      <NavLink to={"/registration1"} className="main_modal_form_p">Регистрация</NavLink>
                     </form>
-                  </Typography>
                 </Box>
               </Modal>
             </li>
@@ -112,7 +104,7 @@ const MainHeader = () => {
             <li className="phone_comp">
               <img src={phone} alt="" />
               <div className="phone_number">
-                <a target="_blank" href="tel:+7 (800) 600-85-89">
+                <a target="_blank" rel="noopener noreferrer" href="tel:+7 (800) 600-85-89">
                   {" "}
                   <p>+7 (800) 600-85-89</p>
                   <p>9:30 - 18:30 по МСК (ежедневно)</p>
