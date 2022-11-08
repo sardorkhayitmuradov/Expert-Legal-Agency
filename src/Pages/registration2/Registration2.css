@@ -9,7 +9,7 @@
 
 .registration2_card {
   width: 420px;
-  height: 864px;
+  height: max-content;
 
   background: #ffffff;
   padding: 40px 80px;
@@ -32,7 +32,7 @@
 .registration2_card .reg2_p {
   color: #073ba1;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -53,6 +53,7 @@
 .reg2_form input {
   height: 50px;
 
+  outline: none;
   padding-left: 10px;
   background: #f1f6fb;
   border: 1px solid #e8eef3;
@@ -64,7 +65,12 @@
   height: 50px;
 }
 
+.reg2_form_hint img{
+  cursor: pointer;
+}
+
 .reg2_form_btn {
+  cursor: pointer;
   margin-top: 20px;
   background: #EC3D5A !important;
   color: #fff;
@@ -72,7 +78,7 @@
   font-size: 16px;
 }
 
-.reg2_form_btn:active, .reg2_form_btn:hover {
+.reg2_form_btn:active {
   background: #fff !important;
   color: #EC3D5A !important;
   font-size: 17px;

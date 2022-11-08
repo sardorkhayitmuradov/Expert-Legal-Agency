@@ -12,28 +12,28 @@ const Registration2 = () => {
                     <img src={logo} alt="Logo-image" />
                     </div>
                     <h1>Заполнение профиля</h1>
-                    <p className='reg2_p'>Заполните следующие поля, чтобы <br /> завершить регистрацию</p>
+                    <p className='reg2_p'>Заполните следующие поля, чтобы завершить регистрацию</p>
                     <form className="reg2_form" action="#">
                         <label htmlFor="#">
                         Фамилия
                         </label>
-                        <input type="text" placeholder='Иванов' />
+                        <input type="text" placeholder='Иванов' required/>
                         <p>uft_pole_name</p>
                         <label htmlFor="#">
                         Имя
                         </label>
-                        <input type="text" placeholder='Иван' />
+                        <input type="text" placeholder='Иван'  required/>
                         <p>uft_pole_name</p>
                         <label htmlFor="#">
                         Отчество
                         </label>
-                        <input type="text" placeholder='Иванович' />
+                        <input type="text" placeholder='Иванович' required/>
                         <p>uft_pole_name</p>
                         <label className='reg2_form_hint' htmlFor="#">
                         Место проживания
                         <img src={hint} alt="Hint-icon" />
                         </label>
-                        <input type="text" placeholder='Москва, Липецкая область' />
+                        <input type="text" placeholder='Москва, Липецкая область' required/>
                         <p>uft_pole_name</p>
                         <input className='reg2_form_btn' type="submit" value="Сохранить" />
                     </form>
