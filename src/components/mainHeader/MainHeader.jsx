@@ -71,21 +71,14 @@ const MainHeader = () => {
                   >
                     Вход в личный кабинет
                   </Typography>
-                  <Typography
-                    sx={{
-                      paddingTop: "20px",
-                      color: "#042668",
-                      fontSize: "16px",
-                    }}
-                  >
-                    <form className="modal_form" action="#">
+                    <div className="modal_form" action="#">
                       <label htmlFor="#">Номер телефона</label>
                       <input
                         type="tel"
                         placeholder="+7 (900) 000-00-00"
                         required
                       />
-                      <p>uft_pole_name</p>
+                      <span>uft_pole_name</span>
                       <label className="main_modal_form_label" htmlFor="#">
                         <span>Пароль</span>
                         <span
@@ -96,11 +89,10 @@ const MainHeader = () => {
                         </span>
                       </label>
                       <input type="password" required />
-                      <p>uft_pole_name</p>
+                      <span>uft_pole_name</span>
                       <input className="main_modal_form_btn" type="submit" value="Войти" />
-                      <p className="main_modal_form_p" onClick={() => navigate("/registration1")}>Регистрация</p>
-                    </form>
-                  </Typography>
+                      <NavLink className="main_modal_form_p" to={'/registration1'}>Регистрация</NavLink>
+                    </div>
                 </Box>
               </Modal>
             </li>
