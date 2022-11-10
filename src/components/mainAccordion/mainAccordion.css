@@ -1,0 +1,40 @@
+.main_accordion_container {
+       width: 1180px;
+       margin: 0 auto;
+       font-family: 'Rubik';
+}
+
+.main_accordion_label h1{
+       padding: 70px 0;
+       font-size: 32px;
+       color: #073BA1;
+       text-align: center;
+       font-weight: 500;
+}
+
+.main_accordion_parent{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+}
+
+.main_accordion_right a {
+       color: #073BA1;
+       font-size: 16px;
+       float: right;
+}
+
+.css-1m4ljmh-MuiTypography-root {
+       width: 10% !important;
+}
+
+@media all and (max-width: 768px) {
+       .main_accordion_parent{
+              display: grid;
+              grid-template-columns: repeat(1,1fr);
+              padding: 0 40px;
+       }
+       .main_accordion_left {
+              text-align: center;
+       }
+       
+}

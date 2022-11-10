@@ -1,0 +1,26 @@
+import React from 'react';
+import "../../Pages/codeEmail/CodeEmail.css";
+import logo from '../../assets/images/main/logo.svg';
+
+const CodeEmail = () => {
+    return (
+        <>
+        <div className="code_mail_container">
+            <div className="code_mail_card">
+                <div className="code_mail_img">
+                    <img src={logo} alt="Logo" />
+                </div>
+                <div className="code_mail_titles">
+                    <h1>Подтверждение</h1>
+                    <p>Мы вышлем на <span>example@gmail.com</span> письмо с кодом</p>
+                    <p>Код из письма</p>
+                    
+                    <button className='code_mail_btn'>Далее</button>
+                </div>
+            </div>
+        </div>   
+        </>
+    );
+}
+
+export default CodeEmail;

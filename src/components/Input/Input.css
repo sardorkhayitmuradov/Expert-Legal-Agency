@@ -1,0 +1,79 @@
+.input-wrapper {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input  {
+  font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #042668;
+}
+
+.label {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042668;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+  background: #f1f6fb;
+  border: 1px solid #e8eef3;
+  border-radius: 8px;
+  padding: 15px 14px;
+  margin-bottom: 6px;
+  /* border: none; */
+}
+
+.input:focus {
+  outline: none;
+  background: #f1f6fb;
+  border: 1px solid #073ba1;
+}
+
+.input::placeholder {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #79859e;
+}
+
+.desc {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #042668;
+}
+
+::-webkit-datetime-edit-month-field  , ::-webkit-datetime-edit-day-field , ::-webkit-datetime-edit-year-field{
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #79859e;
+  background-color: transparent;
+}
+
+::-webkit-calendar-picker-indicator {
+  background: url('../../assets/images/main/date.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
