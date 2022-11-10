@@ -1,4 +1,5 @@
 import React from 'react';
+import "../../Pages/search/Search.css";
 
 const Search = () => {
     return (
