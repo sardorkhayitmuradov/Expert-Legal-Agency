@@ -31,6 +31,11 @@ footer {
 
 .twice_li .text_1 {
        width: 50px;
+       color: #fff !important;
+}
+
+.twice_li a p {
+       color: #fff !important;
 }
 .f_main {
    font-weight: 500;    
