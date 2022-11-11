@@ -1,0 +1,62 @@
+.registration2_container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  font-family: "Rubik";
+}
+
+.registration2_card {
+  width: 420px;
+  height: max-content;
+
+  background: #ffffff;
+  padding: 70px;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 30px;
+}
+
+.reg2_logo_div {
+  text-align: center;
+}
+
+.registration2_card h1 {
+  font-size: 24px;
+  color: #073ba1;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.registration2_card .reg2_p {
+  color: #073ba1;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
+.reg2_form {
+  display: flex;
+  line-height: 30px;
+  flex-direction: column;
+}
+
+.reg2_form_btn {
+  height: 50px;
+
+  cursor: pointer;
+  margin-top: 20px;
+  background: #ec3d5a;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.reg2_form_btn:active {
+  background: #fff;
+  color: #ec3d5a;
+  font-size: 17px;
+}
