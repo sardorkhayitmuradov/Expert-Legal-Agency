@@ -1,0 +1,41 @@
+import React,{useState}  from 'react'
+import "../../components/CodeInput/CodeInput.css";
+
+const CodeInput = () => {
+       const [code,setCode] = useState(new Array(5).fill(""));
+
+    const handleChange = (el, index) => {
+        if(isNaN(el.value)) return false;
+
+        setCode([...code.map((d,idx) => (idx === index ? el.value : d))]);
+
+        // Focus next input
+        if(el.nextSibling) {
+            el.nextSibling.focus();
+        }
+    }
+  return (
+    <>
+  <div className='code_inputs_parent'>
+                    {code?.map((data,index) => {
+                        return(
+                            <input
+                            className='code_input'
+                            type="text"
+                             maxLength={1} 
+                            key={index}
+                            value={data}
+                            onChange={(e) => {
+                                handleChange(e.target, index)
+                            }}
+                            onFocus={(e) => e.target.select()}
+                             />
+                        )
+                    })}
+                    </div>
+                    <p>{code.join("")}</p>
+    </>
+  )
+}
+
+export default CodeInput

@@ -1,6 +1,7 @@
 import React from 'react';
 import "../../Pages/codeEmail/CodeEmail.css";
 import logo from '../../assets/images/main/logo.svg';
+import CodeInput from '../../components/CodeInput/CodeInput';
 
 const CodeEmail = () => {
     return (
@@ -14,7 +15,7 @@ const CodeEmail = () => {
                     <h1>Подтверждение</h1>
                     <p>Мы вышлем на <span>example@gmail.com</span> письмо с кодом</p>
                     <p>Код из письма</p>
-                    
+                    <CodeInput/>
                     <button className='code_mail_btn'>Далее</button>
                 </div>
             </div>

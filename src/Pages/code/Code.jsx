@@ -1,8 +1,10 @@
 import React from 'react';
 import "../../Pages/code/Code.css";
 import logo from '../../assets/images/main/logo.svg';
+import CodeInput from '../../components/CodeInput/CodeInput';
 
 const Code = () => {
+
     return (
         <>
           <div className="code_container">
@@ -14,6 +16,7 @@ const Code = () => {
                     <h1>Подтверждение</h1>
                     <p>Мы вышлем на <span>+7 (900) 000-00-00</span> бесплатное SMS с кодом</p>
                     <p>Код из SMS</p>
+                    <CodeInput/>
                     <button className='code_card_btn'>Далее</button>
                 </div>
             </div>
