@@ -1,6 +1,7 @@
 import React from "react";
 import "../../Pages/search/Search.css";
 import MainHeader from "../../components/mainHeader/MainHeader";
+import Footer from "../../components/Footer/Footer";
 import error from "../../assets/images/main/error.svg";
 import Input from "../../components/Input/Input";
 
@@ -72,9 +73,43 @@ const Search = () => {
           <div className="search_card_2_label">
             <h1>Результаты поиска</h1>
           </div>
-        
+          <table className="search_table">
+            <thead>
+            <tr className="search_table_head_tr">
+              <th className="search_table_name">ФИО нотариуса</th>
+              <th  className="search_table_number">Номер телефона</th>
+              <th  className="search_table_email">Email</th>
+              <th className="search_table_address">Адрес</th>
+              <th className="search_table_empty">empty</th>
+            </tr>
+            </thead>
+           <tbody>
+           <tr className="search_table_body_tr">
+              <td  className="search_table_name">Капустин Трофим Серапионович</td>
+              <td  className="search_table_number">+7 (900) 000-00-00</td>
+              <td  className="search_table_email">haheutelauyau-1851@yopmail.com</td>
+              <td className="search_table_address">Ленинградская область, город Зарайск, пр. Гоголя, 10</td>
+              <td><button className="search_table_btn">Подключить</button></td>
+            </tr>
+            <tr className="search_table_body_tr">
+              <td  className="search_table_name">Аксенов Иван Владимирович</td>
+              <td  className="search_table_number">+7 (900) 000-00-00</td>
+              <td className="search_table_email">preuffefreuddewou-4251@yopmail.com</td>
+              <td className="search_table_address">Кировская область, город Люберцы, пл. Славы, 74</td>
+              <td><button className="search_table_btn">Подключить</button></td>
+            </tr>
+            <tr className="search_table_body_tr">
+              <td  className="search_table_name">Савин Ярослав Эдуардович</td>
+              <td  className="search_table_number">+7 (900) 000-00-00</td>
+              <td className="search_table_email">micrulakobra-3611@yopmail.com</td>
+              <td className="search_table_address">Белгородская область, город Можайск, наб. Будапештсткая, 23</td>
+              <td><button className="search_table_btn">Подключить</button></td>
+            </tr>
+           </tbody>
+          </table>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

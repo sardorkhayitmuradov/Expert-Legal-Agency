@@ -1,7 +1,7 @@
 .search_container {
   width: 1180px;
   margin: 0 auto;
-  padding-top: 60px;
+  padding: 60px 0;
   font-family: 'Rubik';
 }
 
@@ -49,6 +49,7 @@
   width: 280px;
   height: 50px;
 
+  cursor: pointer;
   background: #073BA1;
   color: #fff;
   border: none;
@@ -75,5 +76,85 @@
   font-size: 24px;
   font-weight: 500;
   color: #073BA1;
+  padding-bottom: 50px;
 }
 
+.search_table {
+  width: 100%;
+}
+
+
+.search_table_empty {
+  visibility: hidden;
+}
+
+.search_table_name {
+  width: 180px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 500;
+  color: #073BA1;
+}
+
+.search_table_number {
+  width: 180px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+}
+
+.search_table_email {
+  width: 280px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+}
+
+.search_table_address {
+  width: 280px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+}
+
+.search_table_btn {
+  width: 148px;
+  height: 40px;
+
+  color: #fff;
+  background: #EC3D5A;
+  border: 2px solid #EC3D5A;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.5s ease;
+  margin-left: 100px;
+}
+
+.search_table_btn:hover {
+  background: #fff;
+  color: #EC3D5A;
+  transition: 0.5s ease;
+}
+
+.search_table_head_tr {
+  border-bottom: 2px solid #EBF2FF !important;
+}
+
+.search_table_head_tr th{
+  color: #073BA1;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search_table_body_tr .search_table_number, .search_table_address, .search_table_email{
+  color: #042668;
+  font-size: 14px;
+  font-weight: 400;
+}
