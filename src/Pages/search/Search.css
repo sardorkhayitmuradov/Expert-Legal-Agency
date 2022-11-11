@@ -1,0 +1,160 @@
+.search_container {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 60px 0;
+  font-family: 'Rubik';
+}
+
+.search_card_1 {
+  width: 100%;
+  height: max-content;
+
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+.search_card_1_img {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.search_card_1_img img {
+  cursor: pointer;
+}
+
+.search_card_1_img h3{
+  font-size: 20px;
+  font-weight: 500;
+  color: #073BA1;
+}
+
+.search_card_1_left_desc p {
+  max-width: 450px;
+
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #042668;
+  padding-bottom: 30px;
+}
+
+.search_card_1_left_btn button {
+  width: 280px;
+  height: 50px;
+
+  cursor: pointer;
+  background: #073BA1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px !important;
+}
+
+.search_card_1_left_btn button:hover {
+  background: #fff;
+  color: #073BA1;
+  border: 2px solid #073BA1;
+}
+
+.search_card_1_right {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+
+.search_card_2_label h1{
+  font-size: 24px;
+  font-weight: 500;
+  color: #073BA1;
+  padding-bottom: 50px;
+}
+
+.search_table {
+  width: 100%;
+}
+
+
+.search_table_empty {
+  visibility: hidden;
+}
+
+.search_table_name {
+  width: 180px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 500;
+  color: #073BA1;
+}
+
+.search_table_number {
+  width: 180px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+}
+
+.search_table_email {
+  width: 280px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+}
+
+.search_table_address {
+  width: 280px;
+  height: 24px;
+
+  padding: 20px 0;
+  text-align: start;
+}
+
+.search_table_btn {
+  width: 148px;
+  height: 40px;
+
+  color: #fff;
+  background: #EC3D5A;
+  border: 2px solid #EC3D5A;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.5s ease;
+  margin-left: 100px;
+}
+
+.search_table_btn:hover {
+  background: #fff;
+  color: #EC3D5A;
+  transition: 0.5s ease;
+}
+
+.search_table_head_tr {
+  border-bottom: 2px solid #EBF2FF !important;
+}
+
+.search_table_head_tr th{
+  color: #073BA1;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search_table_body_tr .search_table_number, .search_table_address, .search_table_email{
+  color: #042668;
+  font-size: 14px;
+  font-weight: 400;
+}
