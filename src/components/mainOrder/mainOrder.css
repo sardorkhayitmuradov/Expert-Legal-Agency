@@ -1,0 +1,41 @@
+.order__title {
+    margin-bottom: 60px;
+}
+
+.order__list  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('../../assets/images/main/Waves.svg');
+    background-position: top 40px center;
+    background-repeat: no-repeat;
+}
+
+.order__items {
+    max-width: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order__items__title {
+    width: 100%;
+    font-weight: 500;
+font-size: 20px;
+line-height: 26px;
+color: #073BA1;
+text-align: left;
+margin-bottom: 10px;
+}
+
+.order__items__image {
+    margin-bottom: 20px;
+}
+
+.order__items__p {
+    font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #79859E;
+}

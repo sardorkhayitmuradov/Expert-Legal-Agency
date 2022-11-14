@@ -1,0 +1,132 @@
+.main {
+  padding: 40px 0 120px;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form2-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.process {
+  max-width: 880px;
+  width: 100%;
+  padding: 20px 0 0;
+}
+
+.process-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.procces-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.process-header-image {
+  margin-right: 16px;
+}
+
+.header-title {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #073ba1;
+  margin-bottom: 10px;
+}
+
+.header-desc {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042668;
+}
+
+/* rating */
+
+.process-rating {
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-right: auto;
+}
+
+.rating-title {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #042668;
+  margin-bottom: 20px;
+}
+
+.rating-radios {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radio-image {
+  margin-left: 10px;
+}
+
+label {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042668;
+  display: flex;
+  align-items: center;
+}
+.radio-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-btn-prev {
+  padding: 13px 66px;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #073BA1;
+  background: #EBF2FF;
+  border-radius: 8px;
+  border: none;
+  margin-right: 20px;
+}
+
+input:where([type='checkbox'], [type='radio']) {
+  width: 20px;
+  height: 20px;
+  background: #073ba1;
+  box-shadow: 0px 2px 8px rgba(7, 59, 161, 0.1);
+  margin-right: 8px;
+}
+
+.process-checkbox {
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+.process-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+}
+

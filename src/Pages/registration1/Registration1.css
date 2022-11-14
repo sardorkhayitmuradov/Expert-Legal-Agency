@@ -1,0 +1,93 @@
+.registration1_container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  font-family: "Rubik";
+}
+
+.registration1_card {
+  width: 420px;
+  height: max-content;
+
+  background: #ffffff;
+  padding: 70px;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 30px;
+}
+
+.reg1_logo_div {
+  text-align: center;
+}
+
+.registration1_card h1 {
+  font-size: 24px;
+  color: #073ba1;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.reg1_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg1_form_hint {
+  display: flex;
+  height: 50px;
+}
+
+.reg1_form_hint img {
+  cursor: pointer;
+}
+
+.reg1_form_btn {
+  height: 50px;
+
+  cursor: pointer;
+  margin-top: 20px;
+  background: #ec3d5a;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.reg1_form_btn:active {
+  background: #fff ;
+  color: #ec3d5a;
+  font-size: 17px;
+}
+
+.reg1_form_link{
+       color: #073ba1;
+       text-align: center;
+       padding-top: 20px;
+}
+
+
+.reg1_form_span{
+       color: gray;
+}
+.reg1_form_p2{
+       color: gray;
+       font-size: 12px;
+       font-weight: 400;
+       font-family: 'Rubik';
+       padding-top: 13px;
+}
+
+.reg1_form_span2{
+       color: #073ba1;
+       font-weight: 500;
+       font-size: 12px;
+       cursor: pointer;
+}
+
+.reg1_form_span2:hover{
+       border-bottom: 1px solid #073ba1;
+}
