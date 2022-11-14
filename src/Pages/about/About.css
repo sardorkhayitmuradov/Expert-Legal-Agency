@@ -1,0 +1,225 @@
+.about__container {
+  width: 1180px;
+  margin: 0 auto;
+  padding-top: 60px;
+  font-family: "Rubik";
+}
+
+.about__label {
+  font-size: 32px;
+  font-weight: 500;
+  color: #073ba1;
+}
+
+.about__company__parent {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.about__company__right {
+  width: 580px;
+
+  padding-top: 30px;
+}
+
+.about__company__right__title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #073ba1;
+  padding-bottom: 30px;
+}
+
+.about__company__right__desc {
+  font-size: 18px;
+  font-weight: 400;
+  color: #042668;
+}
+
+.about__statsitics__div {
+  width: 728px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 16px;
+  float: right;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  margin-bottom: 60px;
+}
+
+.about__statsitics__first,
+.about__statsitics__second,
+.about__statsitics__third,
+.about__statsitics__fourth {
+  width: 140px;
+}
+
+.about__statsitics__h1 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #073ba1;
+  font-family: "Rubik";
+}
+
+.about__statsitics__p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.about__law__parent {
+  width: 100%;
+  height: max-content;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+.about__law__left {
+  width: 580px;
+
+  padding: 10px 0;
+}
+
+.about__law__title {
+  padding-bottom: 30px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #073ba1;
+}
+
+.about__law__desc {
+  line-height: 26px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #042668;
+}
+
+.about__law__btns {
+  padding-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.about__law__btn1 {
+  width: 230px;
+  height: 50px;
+  background: #ec3d5a;
+  border-radius: 8px;
+  border: 2px solid #ec3d5a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+
+.about__law__btn1:hover {
+  background: #fff;
+  color: #ec3d5a;
+}
+
+.about__law__btn2 {
+  width: 230px;
+  height: 50px;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #073ba1;
+  color: #073ba1;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+
+.about__law__btn2:hover {
+  background: #073ba1;
+  color: #fff;
+}
+
+.about__contacts__parent {
+  display: flex;
+  gap: 130px;
+  padding: 60px 0;
+}
+
+.about__map__address {
+  width: 480px;
+}
+
+.about__map__title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #073ba1;
+  padding-bottom: 20px;
+}
+
+.about__map__desc {
+  font-weight: 400;
+  font-size: 16px;
+  color: #042668;
+}
+
+.about__map {
+  filter: drop-shadow(0px 1px 4px rgba(7, 59, 161, 0.1));
+  border-radius: 20px;
+  border: none;
+}
+
+.about__phone__img, .about__email__img {
+  display: flex;
+  gap: 10px;
+}
+
+.about__phone__img a, .about__email__img a {
+  color: #073BA1;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.about__contact__with__us {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+}
+
+.about__contact__numbers h3{
+  padding-bottom: 10px;
+  color: #073ba1;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about__phone__img {
+  padding-bottom: 5px;
+}
+
+.about__mode h3{
+  color: #073BA1;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.about__mode p {
+  color: #042668;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.about__rekvizits h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #073BA1;
+  padding-bottom: 20px;
+}
+.about__twice__li {
+  display: flex;
+  gap: 20px;
+  line-height: 24px;
+  padding: 2px 0;
+}
+
+.about__twice__li p {
+  color: #042668;
+}

@@ -7,7 +7,7 @@
   width: 100%;
   height: 466px;
 
-  margin: 60px 0;
+  margin-top: 30px;
   padding: 50px;
   background: #ffffff;
   font-family: "Rubik";
@@ -58,13 +58,14 @@
   border-radius: 8px;
 }
 
-.main_input_left p, .main_input_right p {
+.main_input_left p,
+.main_input_right p {
   color: #042668;
 }
 
 .main_aside_button p {
   padding-top: 10px;
-  color: #79859E;
+  color: #79859e;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -75,7 +76,7 @@
   width: 230px;
   height: 50px;
 
-  background: #EC3D5A;
+  background: #ec3d5a;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -83,6 +84,6 @@
 
 .main_aside_button button:hover {
   background: #fff;
-  color: #EC3D5A;
-  border: 2px solid #EC3D5A;
+  color: #ec3d5a;
+  border: 2px solid #ec3d5a;
 }

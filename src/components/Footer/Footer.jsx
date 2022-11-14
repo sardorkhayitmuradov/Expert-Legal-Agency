@@ -78,29 +78,39 @@ const Footer = () => {
                 <Link>Популярные вопросы</Link>
               </li>
               <li>
-                <Link>
-                  Оформление заявок на оценку: круглосуточно
-                </Link>
+                <Link>Оформление заявок на оценку: круглосуточно</Link>
               </li>
               <li>
-                <Link></Link>Отправка отчетов: ежедневно с 09:30 - 18:30
-                (МСК)
+                <Link></Link>Отправка отчетов: ежедневно с 09:30 - 18:30 (МСК)
               </li>
             </ul>
             <ul className="footer_content_4">
               <li>
-                <Link className="f_main">+7 (800) 600-85-89</Link>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="tel:+7 (800) 600-85-89"
+                  className="f_main"
+                >
+                  +7 (800) 600-85-89
+                </a>
               </li>
               <p>
-                <Link className="f_main">epa.kaskad@gmail.com</Link>
+                <a
+                  target="_blank"
+                  href="epa.kaskad@gmail.com"
+                  className="f_main"
+                >
+                  epa.kaskad@gmail.com
+                </a>
               </p>
               <li>
                 <Link className="f_main">Безопасная оплата</Link>
               </li>
               <li className="small_li">
                 <Link>
-                  Операция осуществляется с использованием шифровального{" "}
-                  <br /> соединения SSl
+                  Операция осуществляется с использованием шифровального <br />{" "}
+                  соединения SSl
                 </Link>
               </li>
               <li className="li_imgs">
@@ -118,10 +128,15 @@ const Footer = () => {
           </div>
           <div className="footer_last_content">
             <div className="footer_last_1">
-              <Link>Политика конфиденциальности  <br /> ©2022 Все права защищены</Link>
+              <Link>
+                Политика конфиденциальности <br /> ©2022 Все права защищены
+              </Link>
             </div>
             <div className="footer_last_2">
-              <Link>195197, г. Санкт-Петербург, ул. Минеральная, <br /> д. 13 А, помещ. 19н офис 416/2</Link>
+              <Link>
+                195197, г. Санкт-Петербург, ул. Минеральная, <br /> д. 13 А,
+                помещ. 19н офис 416/2
+              </Link>
             </div>
           </div>
         </div>
@@ -131,4 +146,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
