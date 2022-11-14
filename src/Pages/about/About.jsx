@@ -5,7 +5,7 @@ import about from "../../assets/images/main/pic-about-us.png";
 import judge from "../../assets/images/main/pic-judge.png";
 import phone from "../../assets/images/main/phone.svg";
 import email from "../../assets/images/main/email.svg";
-import Footer from '../../components/Footer/Footer';
+import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   return (
@@ -65,7 +65,14 @@ const About = () => {
             </p>
             <div className="about__law__btns">
               <button className="about__law__btn1">Заказать оценку</button>
-              <button className="about__law__btn2">Обратный звонок</button>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="tel:+7 (800) 600-85-89"
+              >
+                {" "}
+                <button className="about__law__btn2">Обратный звонок</button>
+              </a>
             </div>
           </div>
           <div className="about__law__right">
@@ -148,7 +155,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    <Footer/>
+      <Footer />
     </>
   );
 };
