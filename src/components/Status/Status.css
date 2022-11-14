@@ -69,7 +69,12 @@ font-size: 14px;
 line-height: 20px;
 color: #073BA1;
 padding: 10px 57px;
-border: 1px solid #073BA1;
-filter: drop-shadow(0px 2px 8px rgba(7, 59, 161, 0.1));
+border: 2px solid #073BA1;
+background: #fff;
 border-radius: 8px;
+}
+
+.status-button:hover {
+    color: #fff;
+    background: #042668;
 }

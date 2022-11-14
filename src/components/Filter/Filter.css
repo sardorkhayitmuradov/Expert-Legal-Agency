@@ -1,0 +1,13 @@
+.profile__filter {
+    max-width: 280px;
+    width: 100%;
+}
+
+.filter__label {
+    display: flex; 
+    gap: 10px;
+}
+
+.filter__label img {
+    width: 30px;
+}
