@@ -94,5 +94,11 @@ line-height: 26px;
   background: #ec3d5a;
   border-radius: 40px;
   padding: 15px 21px 15px 25px;
-  border: none;
+  border: 2px solid #ec3d5a;
+  cursor: pointer;
+}
+
+.rating__item__button:hover {
+  background: #ffffff;
+  color: #ec3d5a;
 }

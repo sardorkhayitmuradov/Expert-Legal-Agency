@@ -1,10 +1,10 @@
 import React from "react";
 import "../../components/ProfileHeader/ProfileHeader.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/main/logo.svg";
-import setting from '../../assets/images/main/setting.svg';
-import help from '../../assets/images/main/help.svg';
-import logout from '../../assets/images/main/logout.svg';
+import setting from "../../assets/images/main/setting.svg";
+import help from "../../assets/images/main/help.svg";
+import logout from "../../assets/images/main/logout.svg";
 
 const ProfileHeader = () => {
   return (
@@ -26,13 +26,19 @@ const ProfileHeader = () => {
             </NavLink>
             <ul className="profile__header__ul">
               <li>
-                <NavLink className='profile__header__ul__link'>Мои заказы</NavLink>
+                <NavLink className="profile__header__ul__link">
+                  Мои заказы
+                </NavLink>
               </li>
               <li>
-                <NavLink className='profile__header__ul__link'>Заказать оценку</NavLink>
+                <NavLink className="profile__header__ul__link">
+                  Заказать оценку
+                </NavLink>
               </li>
               <li>
-                <NavLink to={'/about'} className='profile__header__ul__link'>О компании</NavLink>
+                <NavLink to={"/about"} className="profile__header__ul__link">
+                  О компании
+                </NavLink>
               </li>
               <li>
                 <div className="profile__header__dropdown">
@@ -55,9 +61,19 @@ const ProfileHeader = () => {
                     </span>
                   </button>
                   <div className="profile__header__dropdown__content">
-                    <div className="dropdown__content__links"><img src={setting} alt="Setting" /> <span>Настройки</span></div>
-                    <div className="dropdown__content__links"><img src={help} alt="Help" /><span>Помощь</span></div>
-                    <div className="dropdown__content__links"><img src={logout} alt="LogOut" /><span>Выйти</span></div>
+                    <Link className="dropdown__content__links" to="/setting">
+                      {" "}
+                      <img src={setting} alt="Setting" /> <span>Настройки</span>
+                    </Link>
+
+                    <Link to="/" className="dropdown__content__links">
+                      <img src={help} alt="Help" />
+                      <span>Помощь</span>
+                    </Link>
+                    <Link to="/" className="dropdown__content__links">
+                      <img src={logout} alt="LogOut" />
+                      <span>Выйти</span>
+                    </Link>
                   </div>
                 </div>
               </li>

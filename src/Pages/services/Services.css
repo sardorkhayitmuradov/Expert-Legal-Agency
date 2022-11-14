@@ -1,0 +1,99 @@
+.sevices__container {
+  width: 1180px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.services__open__natarius__parent {
+  width: 100%;
+  height: max-content;
+
+  padding: 45px;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 20px;
+  margin-bottom: 70px;
+  display: flex;
+  gap: 100px;
+}
+
+.services__left__title {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+  color: #073ba1;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.services__left__desc {
+  width: 450px;
+
+  color: #042668;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Rubik";
+}
+
+.services__left_btn {
+  width: 250px;
+  height: 50px;
+
+  background: #ec3d5a;
+  border: 2px solid #ec3d5a;
+  border-radius: 8px;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+
+.services__left_btn:hover {
+  background: #fff;
+  color: #ec3d5a;
+}
+
+.services__right_title,
+.services__right_title1,
+.services__right_title2,
+.services__right_title3 {
+  display: flex;
+  gap: 10px;
+}
+
+.services__right__contact__data {
+  padding-bottom: 10px;
+  color: #073ba1;
+  font-size: 20px;
+}
+
+.services__user {
+  color: #073ba1;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.services__right_title1 h4,
+.services__right_title2 h4,
+.services__right_title3 h4 {
+  color: #042668;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Rubik";
+}
+
+.services__right_title1 span,
+.services__right_title2 span,
+.services__right_title3 span {
+    font-weight: 400;
+    color: #042668;
+    font-size: 18px;
+    font-family: 'Rubik';
+}
+
+.services__right_title1,
+.services__right_title2,
+.services__right_title3 {
+    padding-bottom: 10px;
+} 

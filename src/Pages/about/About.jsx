@@ -5,6 +5,7 @@ import about from "../../assets/images/main/pic-about-us.png";
 import judge from "../../assets/images/main/pic-judge.png";
 import phone from "../../assets/images/main/phone.svg";
 import email from "../../assets/images/main/email.svg";
+import Footer from '../../components/Footer/Footer';
 
 const About = () => {
   return (
@@ -147,6 +148,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    <Footer/>
     </>
   );
 };
