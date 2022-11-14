@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import error from "../../assets/images/main/error.svg";
 import Input from "../../components/Input/Input";
 import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
+import Notorious from "../../components/Notorious/Notorious";
 
 const Search = () => {
   return (
@@ -11,21 +12,7 @@ const Search = () => {
       <ProfileHeader/>
       <div className="search_container">
         <div className="search_card_1">
-          <div className="search_card_1_left">
-            <div className="search_card_1_img">
-              <img src={error} alt="Error" />
-              <h3>У вас нет привязки к Нотариусу</h3>
-            </div>
-            <div className="search_card_1_left_desc">
-              <p>
-                Найдите своего нотариуса в нашей системе, чтобы автоматически
-                передавать результаты оценок. Повторная отправка не потребуется.
-              </p>
-            </div>
-            <div className="search_card_1_left_btn">
-              <button>Поиск Нотариуса</button>
-            </div>
-          </div>
+          <Notorious label={'У вас нет привязки к Нотариусу'} image={error} desc={'Найдите своего нотариуса в нашей системе, чтобы автоматически передавать результаты оценок. Повторная отправка не потребуется.'} buttonName={'Поиск Нотариуса'} />
           <div className="search_card_1_right">
             <div className="search_card_1_input">
               <Input

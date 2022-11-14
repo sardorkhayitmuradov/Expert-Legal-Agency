@@ -1,0 +1,60 @@
+.myorder {
+  max-width: 880px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 16px;
+  gap: 20px;
+  padding: 15px 100px 35px 30px;
+}
+
+.myorder-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myorder-info-wrapper {
+  max-width: 550px;
+  width: 100%;
+}
+
+.myorder-date {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #042668;
+  margin-bottom: 4px;
+}
+
+.wrapper-title {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #042668;
+  margin-bottom: 6px;
+}
+
+.myorder-wrapper-desc {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #042668;
+  margin-bottom: 16px;
+}
+
+.wrapper-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 337px;
+  width: 100%;
+  margin: 0;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #073ba1;
+}
