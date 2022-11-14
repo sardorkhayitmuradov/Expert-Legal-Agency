@@ -1,14 +1,14 @@
 import React from "react";
 import "../../Pages/search/Search.css";
-import MainHeader from "../../components/mainHeader/MainHeader";
 import Footer from "../../components/Footer/Footer";
 import error from "../../assets/images/main/error.svg";
 import Input from "../../components/Input/Input";
+import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
 
 const Search = () => {
   return (
     <>
-      <MainHeader />
+      <ProfileHeader/>
       <div className="search_container">
         <div className="search_card_1">
           <div className="search_card_1_left">
