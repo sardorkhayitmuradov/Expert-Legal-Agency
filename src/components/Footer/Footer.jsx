@@ -78,14 +78,25 @@ const Footer = () => {
                 <Link>Популярные вопросы</Link>
               </li>
               <li>
+<<<<<<< HEAD
                 <Link>Оформление заявок на оценку: круглосуточно</Link>
               </li>
               <li>
                 <Link></Link>Отправка отчетов: ежедневно с 09:30 - 18:30 (МСК)
+=======
+                <Link>
+                  Оформление заявок на оценку: круглосуточно
+                </Link>
+              </li>
+              <li>
+                <Link></Link>Отправка отчетов: ежедневно с 09:30 - 18:30
+                (МСК)
+>>>>>>> 3ac6657956b1e43e5a72908ec074ff5f60494585
               </li>
             </ul>
             <ul className="footer_content_4">
               <li>
+<<<<<<< HEAD
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -103,14 +114,25 @@ const Footer = () => {
                 >
                   epa.kaskad@gmail.com
                 </a>
+=======
+                <Link className="f_main">+7 (800) 600-85-89</Link>
+              </li>
+              <p>
+                <Link className="f_main">epa.kaskad@gmail.com</Link>
+>>>>>>> 3ac6657956b1e43e5a72908ec074ff5f60494585
               </p>
               <li>
                 <Link className="f_main">Безопасная оплата</Link>
               </li>
               <li className="small_li">
                 <Link>
+<<<<<<< HEAD
                   Операция осуществляется с использованием шифровального <br />{" "}
                   соединения SSl
+=======
+                  Операция осуществляется с использованием шифровального{" "}
+                  <br /> соединения SSl
+>>>>>>> 3ac6657956b1e43e5a72908ec074ff5f60494585
                 </Link>
               </li>
               <li className="li_imgs">
@@ -128,6 +150,7 @@ const Footer = () => {
           </div>
           <div className="footer_last_content">
             <div className="footer_last_1">
+<<<<<<< HEAD
               <Link>
                 Политика конфиденциальности <br /> ©2022 Все права защищены
               </Link>
@@ -137,6 +160,12 @@ const Footer = () => {
                 195197, г. Санкт-Петербург, ул. Минеральная, <br /> д. 13 А,
                 помещ. 19н офис 416/2
               </Link>
+=======
+              <Link>Политика конфиденциальности  <br /> ©2022 Все права защищены</Link>
+            </div>
+            <div className="footer_last_2">
+              <Link>195197, г. Санкт-Петербург, ул. Минеральная, <br /> д. 13 А, помещ. 19н офис 416/2</Link>
+>>>>>>> 3ac6657956b1e43e5a72908ec074ff5f60494585
             </div>
           </div>
         </div>
@@ -146,3 +175,7 @@ const Footer = () => {
 };
 
 export default Footer;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ac6657956b1e43e5a72908ec074ff5f60494585
