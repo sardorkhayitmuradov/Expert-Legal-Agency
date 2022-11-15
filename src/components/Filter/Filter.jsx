@@ -1,45 +1,58 @@
 import React from "react";
 import "../Filter/Filter.css";
 import filter from "../../assets/images/main/filter.svg";
+import { Dropdown } from "rsuite";
 
 const Filter = () => {
   return (
     <>
       <div className="profile__filter">
         <div className="filter__label">
-          <h2>Фильтры</h2>
+          <h1>Фильтры</h1>
           <img src={filter} alt="Filter" />
         </div>
-        <div className="profile__filter__dropdown">
-          <button>
-            Тип оценки{" "}
-            <span className="dropdown__btn__span">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-chevron-compact-up"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z"
-                />
-              </svg>
-            </span>
-          </button>
-          <div className="profile__filter__dropdown__content">
-            <a className="dropdown__content__links" href="#">
-              <span>Настройки</span>
-            </a>
-            <a href="#" className="dropdown__content__links">
-              <span>Помощь</span>
-            </a>
-            <a href="#" className="dropdown__content__links">
-              <span>Выйти</span>
-            </a>
-          </div>
+        <div className="filter__dropdown">
+          <Dropdown className="filter__drop__btn" title="Тип оценки">
+            <br />
+            <div className="filter__dropdown_link">
+              <input className="filter_inp" type="checkbox" />
+              <Dropdown.Item className="filter__dropdown_text1">Для раздела имущества</Dropdown.Item>
+            </div>
+            <br />
+            <div className="filter__dropdown_link">
+              <input className="filter_inp" type="checkbox" />
+              <Dropdown.Item className="filter__dropdown_text2">Для наследства </Dropdown.Item>
+            </div>
+            <br />
+            <div className="filter__dropdown_link">
+              <input className="filter_inp" type="checkbox" />
+              <Dropdown.Item className="filter__dropdown_text3">Для продажи имущества</Dropdown.Item>
+            </div>
+          </Dropdown>
+        </div>
+        <div className="filter__dropdown">
+          <Dropdown className="filter__drop__btn" title="Статус">
+            <br />
+            <div className="filter__dropdown_link">
+              <input className="filter_inp" type="checkbox" />
+              <Dropdown.Item className="filter__dropdown_text1">Исполнен</Dropdown.Item>
+            </div>
+            <br />
+            <div className="filter__dropdown_link">
+              <input className="filter_inp" type="checkbox" />
+              <Dropdown.Item className="filter__dropdown_text2">Новый</Dropdown.Item>
+            </div>
+            <br />
+            <div className="filter__dropdown_link">
+              <input className="filter_inp" type="checkbox" />
+              <Dropdown.Item className="filter__dropdown_text3">В работе</Dropdown.Item>
+            </div>
+            <br />
+            <div className="filter__dropdown_link">
+              <input className="filter_inp" type="checkbox" />
+              <Dropdown.Item className="filter__dropdown_text3">Не оплачен</Dropdown.Item>
+            </div>
+          </Dropdown>
         </div>
       </div>
     </>

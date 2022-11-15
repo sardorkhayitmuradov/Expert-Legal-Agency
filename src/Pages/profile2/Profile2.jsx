@@ -76,21 +76,27 @@ const Profile2 = () => {
             <MyOrder>
               <Status progress={"В работе"} />
             </MyOrder>
+            <br />
             <MyOrder>
               <Status progress={"В работе"} />
             </MyOrder>
+            <br />
             <MyOrder>
               <Status progress={"Исполнен"} />
             </MyOrder>
+            <br />
             <MyOrder>
               <Status progress={"Исполнен"} />
             </MyOrder>
+            <br />
             <MyOrder>
               <Status progress={"Не оплачен"} />
             </MyOrder>
+            <br />
             <MyOrder>
               <Status progress={"Не оплачен"} />
             </MyOrder>
+            <br />
             <Filter />
           </div>
         </section>

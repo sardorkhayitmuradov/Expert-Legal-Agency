@@ -1,13 +1,51 @@
 .profile__filter {
-    max-width: 280px;
-    width: 100%;
+  max-width: 280px;
+  width: 100%;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik";
 }
 
 .filter__label {
-    display: flex; 
-    gap: 10px;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #ebf2ff;
+  padding: 30px 20px;
+  color: #073ba1;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .filter__label img {
-    width: 30px;
+  width: 30px;
+}
+
+.filter__dropdown {
+  padding: 30px 20px;
+  border-bottom: 1px solid #ebf2ff;
+}
+
+.filter__dropdown_link {
+  display: flex;
+}
+
+.rs-dropdown-toggle {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Rubik";
+  color: #042668;
+}
+
+.filter__dropdown_text1,
+.filter__dropdown_text2,
+.filter__dropdown_text3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #042668;
 }
