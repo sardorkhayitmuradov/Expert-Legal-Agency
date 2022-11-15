@@ -26,7 +26,7 @@ const Fqa = () => {
       <div className="fqa__container">
         <h1 className="fqa__label">ВОПРОС-ОТВЕТ</h1>
         <div className="main_accordion_parent fqa__accordion">
-          <div className="main_accordion_left">
+          <div className="main_accordion_left fqa__accordion__left">
             <h2>Популярные вопросы</h2>
           </div>
           <div className="main_accordion_right">
@@ -164,6 +164,200 @@ const Fqa = () => {
                 </Typography>
                 <Typography sx={{ color: "#042668", paddingTop: "7px" }}>
                   Какие документы я получу?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography sx={{ paddingLeft: "50px" }}>
+                  Полностью. Согласно ст. 11 Закона № 135-ФЗ «Об оценочной{" "}
+                  <br />
+                  деятельности в Российской Федерации»: <br /> <br /> 1. Отчет
+                  составляется на бумажном носителе и (или) в форме <br />{" "}
+                  электронного документа. <br /> <br /> 2. Отчет, составленный в
+                  форме электронного документа, должен <br />
+                  быть подписан усиленной квалифицированной электронной <br />
+                  подписьюв соответствии с законодательством Российской <br />
+                  Федерации.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+        </div>
+        <div className="main_accordion_parent fqa__accordion">
+          <div className="main_accordion_left fqa__accordion__left">
+            <h2>Оплата заказа</h2>
+          </div>
+          <div className="main_accordion_right">
+            <Accordion
+              expanded={expanded === "panel77"}
+              onChange={handleChange("panel77")}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  <img src={one} alt="One" />
+                </Typography>
+                <Typography sx={{ color: "#042668", paddingTop: "7px" }}>
+                Какими способами можно оплатить заказ?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography sx={{ paddingLeft: "50px" }}>
+                  Полностью. Согласно ст. 11 Закона № 135-ФЗ «Об оценочной{" "}
+                  <br />
+                  деятельности в Российской Федерации»: <br /> <br /> 1. Отчет
+                  составляется на бумажном носителе и (или) в форме <br />{" "}
+                  электронного документа. <br /> <br /> 2. Отчет, составленный в
+                  форме электронного документа, должен <br />
+                  быть подписан усиленной квалифицированной электронной <br />
+                  подписьюв соответствии с законодательством Российской <br />
+                  Федерации.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel88"}
+              onChange={handleChange("panel88")}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel2bh-content"
+                id="panel2bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  <img src={two} alt="Two" />
+                </Typography>
+                <Typography sx={{ color: "#042668", paddingTop: "7px" }}>
+                Безопасно ли производить оплату на сайте?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography sx={{ paddingLeft: "50px" }}>
+                  Полностью. Согласно ст. 11 Закона № 135-ФЗ «Об оценочной{" "}
+                  <br />
+                  деятельности в Российской Федерации»: <br /> <br /> 1. Отчет
+                  составляется на бумажном носителе и (или) в форме <br />{" "}
+                  электронного документа. <br /> <br /> 2. Отчет, составленный в
+                  форме электронного документа, должен <br />
+                  быть подписан усиленной квалифицированной электронной <br />
+                  подписьюв соответствии с законодательством Российской <br />
+                  Федерации.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel99"}
+              onChange={handleChange("panel99")}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel3bh-content"
+                id="panel3bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  <img src={three} alt="Three" />
+                </Typography>
+                <Typography sx={{ color: "#042668", paddingTop: "7px" }}>
+                Есть ли гарантия возврата денег?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography sx={{ paddingLeft: "50px" }}>
+                  Полностью. Согласно ст. 11 Закона № 135-ФЗ «Об оценочной{" "}
+                  <br />
+                  деятельности в Российской Федерации»: <br /> <br /> 1. Отчет
+                  составляется на бумажном носителе и (или) в форме <br />{" "}
+                  электронного документа. <br /> <br /> 2. Отчет, составленный в
+                  форме электронного документа, должен <br />
+                  быть подписан усиленной квалифицированной электронной <br />
+                  подписьюв соответствии с законодательством Российской <br />
+                  Федерации.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+        </div>
+        <div className="main_accordion_parent fqa__accordion">
+          <div className="main_accordion_left fqa__accordion__left">
+            <h2>Результат оценки</h2>
+          </div>
+          <div className="main_accordion_right">
+            <Accordion
+              expanded={expanded === "panel17"}
+              onChange={handleChange("panel17")}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1bh-content"
+                id="panel1bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  <img src={one} alt="One" />
+                </Typography>
+                <Typography sx={{ color: "#042668", paddingTop: "7px" }}>
+                Как я получу результат оценки?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography sx={{ paddingLeft: "50px" }}>
+                  Полностью. Согласно ст. 11 Закона № 135-ФЗ «Об оценочной{" "}
+                  <br />
+                  деятельности в Российской Федерации»: <br /> <br /> 1. Отчет
+                  составляется на бумажном носителе и (или) в форме <br />{" "}
+                  электронного документа. <br /> <br /> 2. Отчет, составленный в
+                  форме электронного документа, должен <br />
+                  быть подписан усиленной квалифицированной электронной <br />
+                  подписьюв соответствии с законодательством Российской <br />
+                  Федерации.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel18"}
+              onChange={handleChange("panel18")}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel2bh-content"
+                id="panel2bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  <img src={two} alt="Two" />
+                </Typography>
+                <Typography sx={{ color: "#042668", paddingTop: "7px" }}>
+                Как можно передать отчёт об оценке нотариусу?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography sx={{ paddingLeft: "50px" }}>
+                  Полностью. Согласно ст. 11 Закона № 135-ФЗ «Об оценочной{" "}
+                  <br />
+                  деятельности в Российской Федерации»: <br /> <br /> 1. Отчет
+                  составляется на бумажном носителе и (или) в форме <br />{" "}
+                  электронного документа. <br /> <br /> 2. Отчет, составленный в
+                  форме электронного документа, должен <br />
+                  быть подписан усиленной квалифицированной электронной <br />
+                  подписьюв соответствии с законодательством Российской <br />
+                  Федерации.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion
+              expanded={expanded === "panel19"}
+              onChange={handleChange("panel19")}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel3bh-content"
+                id="panel3bh-header"
+              >
+                <Typography sx={{ width: "33%", flexShrink: 0 }}>
+                  <img src={three} alt="Three" />
+                </Typography>
+                <Typography sx={{ color: "#042668", paddingTop: "7px" }}>
+                Можно ли заказать бумажный дубликат отчёта?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
