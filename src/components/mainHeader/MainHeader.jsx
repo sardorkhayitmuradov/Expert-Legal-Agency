@@ -38,7 +38,7 @@ const MainHeader = () => {
     <nav>
       <div className="main_container">
         <div className="main_navbar">
-          <NavLink to="/">
+          <NavLink>
             {" "}
             <ul className="navbar_left_ul">
               <li className="nav_logo_img">

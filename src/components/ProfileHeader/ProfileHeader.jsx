@@ -12,7 +12,7 @@ const ProfileHeader = () => {
       <nav>
         <div className="profile__header__container">
           <div className="profile__header__navbar">
-            <NavLink to="/">
+            <NavLink>
               {" "}
               <ul className="navbar_left_ul">
                 <li className="nav_logo_img">
