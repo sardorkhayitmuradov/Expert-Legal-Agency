@@ -1,5 +1,5 @@
 import React from 'react';
-import MainHeader from '../../components/mainHeader/MainHeader';
+import ProfileHeader from '../../components/ProfileHeader/ProfileHeader';
 import Footer from '../../components/Footer/Footer'
 import Input from '../../components/Input/Input';
 import './Setting.css';
@@ -8,7 +8,7 @@ const Setting = () => {
   return (
     <>
       <header className='header'>
-        <MainHeader />
+        <ProfileHeader />
       </header>
       <main className='main'>
         <section className='setting-profile'>
