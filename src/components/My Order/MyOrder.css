@@ -58,3 +58,7 @@
   line-height: 20px;
   color: #073ba1;
 }
+
+.links-title{
+  cursor: pointer;
+}

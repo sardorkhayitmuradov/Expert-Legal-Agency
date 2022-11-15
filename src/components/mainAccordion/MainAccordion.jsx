@@ -182,7 +182,7 @@ const MainAccordion = () => {
               </AccordionDetails>
             </Accordion>
             <br/>
-            <Link to="/">Все вопросы</Link>
+            <Link to="/fqa">Все вопросы</Link>
           </div>
         </div>
       </div>

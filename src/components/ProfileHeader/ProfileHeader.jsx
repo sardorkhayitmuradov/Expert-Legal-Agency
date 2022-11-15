@@ -26,12 +26,12 @@ const ProfileHeader = () => {
             </NavLink>
             <ul className="profile__header__ul">
               <li>
-                <NavLink className="profile__header__ul__link">
+                <NavLink to={'/profile2'} className="profile__header__ul__link">
                   Мои заказы
                 </NavLink>
               </li>
               <li>
-                <NavLink className="profile__header__ul__link">
+                <NavLink to={'/services'} className="profile__header__ul__link">
                   Заказать оценку
                 </NavLink>
               </li>
@@ -66,14 +66,14 @@ const ProfileHeader = () => {
                       <img src={setting} alt="Setting" /> <span>Настройки</span>
                     </Link>
 
-                    <Link to="/" className="dropdown__content__links">
+                    <Link to="/fqa" className="dropdown__content__links">
                       <img src={help} alt="Help" />
                       <span>Помощь</span>
                     </Link>
-                    <Link to="/" className="dropdown__content__links">
+                    <a className="dropdown__content__links">
                       <img src={logout} alt="LogOut" />
                       <span>Выйти</span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </li>

@@ -1,7 +1,8 @@
 import React from 'react';
 import statusTimeIcon from '../../assets/images/main/statusTime.svg'
 import receipt from '../../assets/images/main/receipt.svg'
-import './Status.css'
+import './Status.css';
+
 
 const Status = ({ progress }) => {
   if (progress === 'В работе') {

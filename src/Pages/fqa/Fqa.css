@@ -1,0 +1,16 @@
+.fqa__container{
+    width: 1180px;
+    margin: auto;
+    padding: 70px 0;
+    font-family: 'Rubik';
+}
+
+.fqa__label{
+    font-size: 32px;
+    color: #073BA1;
+    font-weight: 500;
+}
+
+.fqa__accordion{
+    padding-top: 60px;
+}

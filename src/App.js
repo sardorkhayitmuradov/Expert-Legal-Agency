@@ -36,7 +36,6 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/code' element={<Code/>}/>
           <Route path="/emailcode" element={<CodeEmail />} />
-          <Route path="/desktop" element={<Desktop />} />
           <Route path='/email' element={<Email />} />
           <Route path='/form1' element={<Form1 />} />
           <Route path='/form2' element={<Form2 />} />
@@ -53,7 +52,6 @@ function App() {
           <Route path='/search' element={<Search/>}/>
           <Route path='/services' element={<Services/>}/>
           <Route path='/setting' element={<Setting/>} />
-          <Route path='/settingsave' element={<SettingSave/>} />
           <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

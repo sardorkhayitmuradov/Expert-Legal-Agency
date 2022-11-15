@@ -1,7 +1,9 @@
 import React from 'react'
-import './MyOrder.css'
+import './MyOrder.css';
+import { useNavigate } from "react-router-dom";
 
 const MyOrder = ({date , title , desc , children}) => {
+  const navigate = useNavigate();
   return (
     <div className='myorder'>
         <h4 className="myorder-date">12.02.2022</h4>
@@ -16,9 +18,9 @@ const MyOrder = ({date , title , desc , children}) => {
                 Для раздела имущества
                 </p>
                 <div className="wrapper-links">
-                    <p className="links-title">Редактировать заказ</p>
+                    <p className="links-title" onClick={() =>navigate("/ordernew")}>Редактировать заказ</p>
                     <p className="links-title">Чек оплаты</p>
-                    <p className="links-title">Подробнее</p>
+                    <p className="links-title" onClick={() =>navigate("/fqa")}>Подробнее</p>
                 </div>
             </div>
 
