@@ -6,8 +6,10 @@ import judge from "../../assets/images/main/pic-judge.png";
 import phone from "../../assets/images/main/phone.svg";
 import email from "../../assets/images/main/email.svg";
 import Footer from "../../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate =useNavigate()
   return (
     <>
       <ProfileHeader />
@@ -64,7 +66,7 @@ const About = () => {
               номеру +7 (800) 600-85-89.
             </p>
             <div className="about__law__btns">
-              <button className="about__law__btn1">Заказать оценку</button>
+              <button className="about__law__btn1" onClick={() => navigate("/services")}>Заказать оценку</button>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
