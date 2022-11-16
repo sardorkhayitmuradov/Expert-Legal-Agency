@@ -2,8 +2,10 @@ import React from "react";
 import "../../Pages/newPassword/NewPassword.css";
 import logo from "../../assets/images/main/logo.svg";
 import Input from "../../components/Input/Input";
+import { useNavigate } from "react-router-dom";
 
 const NewPassword = () => {
+  const navigate = useNavigate()
   return (
     <>
       <div className="new_password_container">
@@ -31,7 +33,7 @@ const NewPassword = () => {
               descValue={"uft_pole_name"}
               question={false}
             />
-            <input className="new_password_form_btn" type="submit" value="Сохранить" />
+            <input onClick={() => navigate("/profile2")} className="new_password_form_btn" type="submit" value="Сохранить" />
           </form>
         </div>
       </div>

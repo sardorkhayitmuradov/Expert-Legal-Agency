@@ -7,6 +7,13 @@ import help from "../../assets/images/main/help.svg";
 import logout from "../../assets/images/main/logout.svg";
 
 const ProfileHeader = () => {
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+  
   return (
     <>
       <nav>
@@ -26,12 +33,12 @@ const ProfileHeader = () => {
             </NavLink>
             <ul className="profile__header__ul">
               <li>
-                <NavLink to={'/profile2'} className="profile__header__ul__link">
+                <NavLink to={"/profile2"} className="profile__header__ul__link">
                   Мои заказы
                 </NavLink>
               </li>
               <li>
-                <NavLink to={'/services'} className="profile__header__ul__link">
+                <NavLink to={"/services"} className="profile__header__ul__link">
                   Заказать оценку
                 </NavLink>
               </li>

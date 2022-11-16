@@ -75,7 +75,7 @@ const MainHeader = () => {
                       fontSize: "23px",
                       fontFamily: "Rubik",
                       fontWeight: "500",
-                      paddingBottom: "20px"
+                      paddingBottom: "20px",
                     }}
                   >
                     Вход в личный кабинет
@@ -98,11 +98,16 @@ const MainHeader = () => {
                         Забыли пароль?
                       </span>
                     </label>
-                    <Input inputType={"password"} inputId={"userPassword"} descValue={"uft_pole_name"}/>
+                    <Input
+                      inputType={"password"}
+                      inputId={"userPassword"}
+                      descValue={"uft_pole_name"}
+                    />
                     <input
                       className="main_modal_form_btn"
                       type="submit"
                       value="Войти"
+                      onClick={() => navigate("/profile2")}
                     />
                     <NavLink
                       to={"/registration1"}

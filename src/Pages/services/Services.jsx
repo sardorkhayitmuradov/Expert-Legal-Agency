@@ -10,8 +10,10 @@ import houseWithPilot from "../../assets/images/main/house-with-land-plot.svg";
 import wareHouseIcon from "../../assets/images/main/warehouse.svg";
 import timeIcon from "../../assets/images/main/time.svg";
 import success from "../../assets/images/main/checkbox-success.svg";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <>
       <ProfileHeader />
@@ -27,14 +29,16 @@ const Services = () => {
               дополнительная отправка результатов не требуется. Если это не Ваш
               нотариус, открепите привязку.
             </p>
-            <button className="services__left_btn">Открепить Нотариуса</button>
+            <button className="services__left_btn" onClick={() => navigate("/profile2")}>Открепить Нотариуса</button>
           </div>
           <div className="services__open__natarius__right">
             <div className="services__right_title services__user">
               <h4>Ваш Нотариус:</h4> <h4>Аксенов Иван Владимирович</h4>
             </div>
             <br />
-            <h4 className="services__right__contact__data">Контактные данные:</h4>
+            <h4 className="services__right__contact__data">
+              Контактные данные:
+            </h4>
             <div className="services__right_title1">
               <h4>Телефон:</h4> <span>+7 (900) 000-00-00</span>
             </div>
@@ -70,7 +74,12 @@ const Services = () => {
               </span>
               <div className="rating__item__bottom">
                 <p className="rating__item__price">1100₽</p>
-                <button className="rating__item__button">Заказать &gt;</button>
+                <button
+                  className="rating__item__button"
+                  onClick={() => navigate("/form1")}
+                >
+                  Заказать &gt;
+                </button>
               </div>
             </div>
           </li>
@@ -91,7 +100,12 @@ const Services = () => {
               </span>
               <div className="rating__item__bottom">
                 <p className="rating__item__price">1100₽</p>
-                <button className="rating__item__button">Заказать &gt;</button>
+                <button
+                  className="rating__item__button"
+                  onClick={() => navigate("/form1")}
+                >
+                  Заказать &gt;
+                </button>
               </div>
             </div>
           </li>
@@ -111,7 +125,12 @@ const Services = () => {
               </span>
               <div className="rating__item__bottom">
                 <p className="rating__item__price">1100₽</p>
-                <button className="rating__item__button">Заказать &gt;</button>
+                <button
+                  className="rating__item__button"
+                  onClick={() => navigate("/form1")}
+                >
+                  Заказать &gt;
+                </button>
               </div>
             </div>
           </li>
@@ -131,7 +150,12 @@ const Services = () => {
               </span>
               <div className="rating__item__bottom">
                 <p className="rating__item__price">1100₽</p>
-                <button className="rating__item__button">Заказать &gt;</button>
+                <button
+                  className="rating__item__button"
+                  onClick={() => navigate("/form1")}
+                >
+                  Заказать &gt;
+                </button>
               </div>
             </div>
           </li>
@@ -152,7 +176,12 @@ const Services = () => {
               </span>
               <div className="rating__item__bottom">
                 <p className="rating__item__price">1100₽</p>
-                <button className="rating__item__button">Заказать &gt;</button>
+                <button
+                  className="rating__item__button"
+                  onClick={() => navigate("/form1")}
+                >
+                  Заказать &gt;
+                </button>
               </div>
             </div>
           </li>
@@ -173,7 +202,12 @@ const Services = () => {
               </span>
               <div className="rating__item__bottom">
                 <p className="rating__item__price">1100₽</p>
-                <button className="rating__item__button">Заказать &gt;</button>
+                <button
+                  className="rating__item__button"
+                  onClick={() => navigate("/form1")}
+                >
+                  Заказать &gt;
+                </button>
               </div>
             </div>
           </li>

@@ -8,9 +8,11 @@ import "./Profile2.css";
 import Status from "../../components/Status/Status";
 import MyOrder from "../../components/My Order/MyOrder";
 import Filter from "../../components/Filter/Filter";
-
+import { useNavigate } from "react-router-dom";
 
 const Profile2 = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <ProfileHeader />
@@ -73,32 +75,37 @@ const Profile2 = () => {
         </section>
         <section className="profile-orders">
           <div className="profile3-container">
-            <h2 className="profile2-title">МОИ ЗАКАЗЫ</h2>
-            <MyOrder>
-              <Status progress={"В работе"} />
-            </MyOrder>
+            <div>
+              <h2 className="profile2-title">МОИ ЗАКАЗЫ</h2>
+              <MyOrder>
+                <Status progress={"В работе"} />
+              </MyOrder>
+              <br />
+              <MyOrder>
+                <Status progress={"В работе"} />
+              </MyOrder>
+              <br />
+              <MyOrder>
+                <Status progress={"Исполнен"} />
+              </MyOrder>
+              <br />
+              <MyOrder>
+                <Status progress={"Исполнен"} />
+              </MyOrder>
+              <br />
+              <MyOrder>
+                <Status progress={"Не оплачен"} />
+              </MyOrder>
+              <br />
+              <MyOrder>
+                <Status progress={"Не оплачен"} />
+              </MyOrder>
+            </div>
             <br />
-            <MyOrder>
-              <Status progress={"В работе"} />
-            </MyOrder>
-            <br />
-            <MyOrder>
-              <Status progress={"Исполнен"} />
-            </MyOrder>
-            <br />
-            <MyOrder>
-              <Status progress={"Исполнен"} />
-            </MyOrder>
-            <br />
-            <MyOrder>
-              <Status progress={"Не оплачен"} />
-            </MyOrder>
-            <br />
-            <MyOrder>
-              <Status progress={"Не оплачен"} />
-            </MyOrder>
-            <br />
-            <Filter />
+            <div>
+              {" "}
+              <Filter />
+            </div>
           </div>
         </section>
       </main>

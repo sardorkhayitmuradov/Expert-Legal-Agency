@@ -27,7 +27,7 @@ const Email = () => {
               descValue={"uft_pole_name"}
               question={false}
             />
-            <input type="submit" value={"Далее"} className="email_form_btn" />
+            <input onClick={() => navigate("/emailcode")} type="submit" value={"Далее"} className="email_form_btn" />
             <span
               className="email_form_navigate"
               onClick={() => navigate("/password")}

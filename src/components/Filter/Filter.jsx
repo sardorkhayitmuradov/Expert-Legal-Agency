@@ -16,17 +16,23 @@ const Filter = () => {
             <br />
             <div className="filter__dropdown_link">
               <input className="filter_inp" type="checkbox" />
-              <Dropdown.Item className="filter__dropdown_text1">Для раздела имущества</Dropdown.Item>
+              <Dropdown.Item className="filter__dropdown_text1">
+                Для раздела имущества
+              </Dropdown.Item>
             </div>
             <br />
             <div className="filter__dropdown_link">
               <input className="filter_inp" type="checkbox" />
-              <Dropdown.Item className="filter__dropdown_text2">Для наследства </Dropdown.Item>
+              <Dropdown.Item className="filter__dropdown_text2">
+                Для наследства{" "}
+              </Dropdown.Item>
             </div>
             <br />
             <div className="filter__dropdown_link">
               <input className="filter_inp" type="checkbox" />
-              <Dropdown.Item className="filter__dropdown_text3">Для продажи имущества</Dropdown.Item>
+              <Dropdown.Item className="filter__dropdown_text3">
+                Для продажи имущества
+              </Dropdown.Item>
             </div>
           </Dropdown>
         </div>
@@ -35,22 +41,30 @@ const Filter = () => {
             <br />
             <div className="filter__dropdown_link">
               <input className="filter_inp" type="checkbox" />
-              <Dropdown.Item className="filter__dropdown_text1">Исполнен</Dropdown.Item>
+              <Dropdown.Item className="filter__dropdown_text1">
+                Исполнен
+              </Dropdown.Item>
             </div>
             <br />
             <div className="filter__dropdown_link">
               <input className="filter_inp" type="checkbox" />
-              <Dropdown.Item className="filter__dropdown_text2">Новый</Dropdown.Item>
+              <Dropdown.Item className="filter__dropdown_text2">
+                Новый
+              </Dropdown.Item>
             </div>
             <br />
             <div className="filter__dropdown_link">
               <input className="filter_inp" type="checkbox" />
-              <Dropdown.Item className="filter__dropdown_text3">В работе</Dropdown.Item>
+              <Dropdown.Item className="filter__dropdown_text3">
+                В работе
+              </Dropdown.Item>
             </div>
             <br />
             <div className="filter__dropdown_link">
               <input className="filter_inp" type="checkbox" />
-              <Dropdown.Item className="filter__dropdown_text3">Не оплачен</Dropdown.Item>
+              <Dropdown.Item className="filter__dropdown_text3">
+                Не оплачен
+              </Dropdown.Item>
             </div>
           </Dropdown>
         </div>
