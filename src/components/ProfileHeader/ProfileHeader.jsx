@@ -5,8 +5,11 @@ import logo from "../../assets/images/main/logo.svg";
 import setting from "../../assets/images/main/setting.svg";
 import help from "../../assets/images/main/help.svg";
 import logout from "../../assets/images/main/logout.svg";
+import { useNavigate } from "react-router-dom";
 
 const ProfileHeader = () => {
+  const navigate = useNavigate()
+
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -79,7 +82,7 @@ const ProfileHeader = () => {
                     </Link>
                     <a className="dropdown__content__links">
                       <img src={logout} alt="LogOut" />
-                      <span>Выйти</span>
+                      <span onClick={() => navigate("/")}>Выйти</span>
                     </a>
                   </div>
                 </div>

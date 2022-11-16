@@ -3,14 +3,16 @@ import "../../Pages/registration1/Registration1.css";
 import logo from "../../assets/images/main/logo.svg";
 import { Link } from "react-router-dom";
 import Input from "../../components/Input/Input";
+import { useNavigate } from "react-router-dom";
 
 const Registration1 = () => {
+  const navigate = useNavigate()
   return (
     <>
-      <div className='registration1_container'>
-        <div className='registration1_card'>
-          <div className='reg1_logo_div'>
-            <img src={logo} alt='Logo' />
+      <div className="registration1_container">
+        <div className="registration1_card">
+          <div className="reg1_logo_div">
+            <img src={logo} alt="Logo" />
           </div>
           <h1>Регистрация профиля</h1>
           <br />
@@ -41,7 +43,7 @@ const Registration1 = () => {
               question={false}
             />
             <br />
-             <Input
+            <Input
               labelName={"Повторите пароль"}
               inputType={"password"}
               inputId={"userPasswordReturn"}
@@ -55,7 +57,12 @@ const Registration1 = () => {
                 обработку персональных данных.
               </span>
             </p>
-            <input className="reg1_form_btn" type="submit" value="Сохранить" />
+            <input
+              className="reg1_form_btn"
+              type="submit"
+              value="Сохранить"
+              onClick={() => navigate("/code")}
+            />
             <Link to="/" className="reg1_form_link">
               Уже зарегистрированы? Войти
             </Link>

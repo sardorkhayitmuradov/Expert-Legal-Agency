@@ -6,8 +6,10 @@ import Footer from "../../components/Footer/Footer";
 import progressIcon from "../../assets/images/main/progress.svg";
 import infoIcon from "../../assets/images/main/info.svg";
 import "./Form1.css";
+import { useNavigate } from "react-router-dom";
 
 const Form1 = () => {
+  const navigate = useNavigate();
   return (
     <>
       <MainHeader />
@@ -246,7 +248,11 @@ const Form1 = () => {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="form-btn">
+              <button
+                onClick={() => navigate("/form2")}
+                type="submit"
+                className="form-btn"
+              >
                 Далее
               </button>
             </form>

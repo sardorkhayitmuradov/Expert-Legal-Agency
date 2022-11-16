@@ -68,10 +68,10 @@
   line-height: 24px;
   text-align: center;
   padding: 13px 48px;
-  border: 1px solid #073ba1;
-  filter: drop-shadow(0px 2px 8px rgba(7, 59, 161, 0.1));
+  border: 2px solid #073ba1;
   border-radius: 8px;
   color: #073ba1;
+  background: #fff;
 }
 
 .hero-right {

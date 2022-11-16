@@ -2,8 +2,10 @@ import React from "react";
 import "../../Pages/registration2/Registration2.css";
 import logo from "../../assets/images/main/logo.svg";
 import Input from "../../components/Input/Input";
+import { useNavigate } from "react-router-dom";
 
 const Registration2 = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="registration2_container">
@@ -35,7 +37,7 @@ const Registration2 = () => {
               question={false}
             />
             <br />
-              <Input
+            <Input
               labelName={"Отчество"}
               inputType={"text"}
               inputId={"userSecondName"}
@@ -44,7 +46,7 @@ const Registration2 = () => {
               question={false}
             />
             <br />
-                 <Input
+            <Input
               labelName={"Место проживания"}
               inputType={"text"}
               inputId={"userAddress"}
@@ -52,7 +54,12 @@ const Registration2 = () => {
               descValue={"uft_pole_name"}
               question={true}
             />
-            <input className="reg2_form_btn" type="submit" value="Сохранить" />
+            <input
+              className="reg2_form_btn"
+              type="submit"
+              value="Сохранить"
+              onClick={() => navigate("/profile2")}
+            />
           </form>
         </div>
       </div>
