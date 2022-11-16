@@ -99,6 +99,7 @@ const About = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="about__map"
+              title="iframe"
             ></iframe>
           </div>
           <div className="about__contact__with__us">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./mainHeader.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/main/logo.svg";
@@ -7,8 +7,38 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Input from "../../components/Input/Input";
+import axios from "axios";
 
 const MainHeader = () => {
+  const [userPhone , setUserPhone] = useState('')
+  const [userPassword , setUserPassword] = useState('')
+
+  const onSubmit = (e) =>{
+    e.preventDefault();
+    axios
+      .post('https://maruf.pythonanywhere.com/api/login/', {
+        phone_number: userPhone,
+        password: userPassword,
+      })
+      .then((res) => {
+        console.log(res.data);
+        // navigate('/profile2')
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    setUserPhone('');
+    setUserPassword('');
+  }
+
+  const onPhone = (value) => {
+    setUserPhone(value)
+  }
+
+  const onPassword = (value) => {
+    setUserPassword(value)
+  }
+
   const style = {
     position: "absolute",
     top: "50%",
@@ -80,13 +110,15 @@ const MainHeader = () => {
                   >
                     Вход в личный кабинет
                   </Typography>
-                  <form className="modal_form" action="#">
+                  <form className="modal_form" onSubmit={onSubmit}>
                     <Input
                       labelName={"Номер телефона"}
                       inputType={"tel"}
                       inputId={"userPhoneNumber"}
                       placeholder={"+7 (900) 000-00-00"}
                       descValue={"uft_pole_name"}
+                      value={userPhone}
+                      onGetValue={onPhone}
                       question={false}
                     />
                     <label className="main_modal_form_label" htmlFor="#">
@@ -102,13 +134,12 @@ const MainHeader = () => {
                       inputType={"password"}
                       inputId={"userPassword"}
                       descValue={"uft_pole_name"}
+                      value={userPassword}
+                      onGetValue={onPassword}
                     />
-                    <input
-                      className="main_modal_form_btn"
-                      type="submit"
-                      value="Войти"
-                      onClick={() => navigate("/profile2")}
-                    />
+                    <button
+                      className="main_modal_form_btn" 
+                    >Войти</button>
                     <NavLink
                       to={"/registration1"}
                       className="main_modal_form_p"

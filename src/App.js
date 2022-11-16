@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./Pages/about/About";
 import Code from "./Pages/code/Code";
 import CodeEmail from "./Pages/codeEmail/CodeEmail";
-import Desktop from "./Pages/desktop/Desktop";
 import Email from "./Pages/email/Email";
 import Error from "./Pages/error/Error";
 import Form1 from "./Pages/form1/Form1";
@@ -22,7 +21,6 @@ import Registration2 from "./Pages/registration2/Registration2";
 import Search from "./Pages/search/Search";
 import Services from "./Pages/services/Services";
 import Setting from "./Pages/setting/Setting";
-import SettingSave from "./Pages/settingSave/SettingSave";
 
 
 function App() {
