@@ -13,6 +13,8 @@ const Registration1 = () => {
   const [userPassword, setUserPassword] = useState('');
   const [userConfirmPassword, setUserConfirmPassword] = useState('');
 
+  window.localStorage.setItem('phone_number' , userPhone);
+
   const onUserphone = (value) => {
     console.log(value);
     setUserPhone(value);
@@ -36,15 +38,19 @@ const Registration1 = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://9ba5-185-203-236-98.in.ngrok.io/api/registr/', {
+      .post('https://maruf.pythonanywhere.com/api/registr/', {
         phone_number: userPhone,
         email: userEmail,
-        password: userPassword,
+        password: userPassword, 
         confirm_password: userConfirmPassword,
+      },{
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        }
       })
       .then((res) => {
         console.log(res.data);
-        // navigate('/code')
+        navigate('/code')
       })
       .catch((err) => {
         console.log(err);

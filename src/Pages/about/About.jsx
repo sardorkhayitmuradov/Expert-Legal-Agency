@@ -6,7 +6,7 @@ import judge from "../../assets/images/main/pic-judge.png";
 import phone from "../../assets/images/main/phone.svg";
 import email from "../../assets/images/main/email.svg";
 import Footer from "../../components/Footer/Footer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , NavLink } from "react-router-dom";
 
 const About = () => {
   const navigate =useNavigate()
@@ -107,13 +107,13 @@ const About = () => {
               <h3>Cвязаться с нами:</h3>
               <div className="about__phone__img">
                 <img src={phone} alt="Phone" />
-                <a target="_blank" href="tel:+7 (800) 600-85-89">
+                <a target="_blank" href="tel:+7 (800) 600-85-89" rel=" noreferrer">
                   +7 (800) 600-85-89
                 </a>
               </div>
               <div className="about__email__img">
                 <img src={email} alt="Email" />
-                <a href="#">epa.kaskad@gmail.com</a>
+                <NavLink >epa.kaskad@gmail.com</NavLink>
               </div>
             </div>
             <div className="about__mode">
