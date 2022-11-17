@@ -1,0 +1,87 @@
+.email_form_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  font-family: "Rubik";
+}
+
+.email_form_card {
+  width: 420px;
+  height: max-content;
+
+  background: #ffffff;
+  padding: 70px;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 30px;
+}
+
+.email_form_img {
+  text-align: center;
+}
+
+.email_form_label {
+  text-align: center;
+}
+.email_form_label h1 {
+  font-size: 24px;
+  color: #073ba1;
+  padding-top: 30px;
+  font-weight: 500;
+}
+
+.email_form_label p {
+  color: #042668;
+  font-size: 16px;
+  padding: 25px 0;
+}
+
+.email_form {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+
+.email_form .email_form_input {
+  height: 50px;
+
+  background: #f1f6fb;
+  border: 1px solid #e8eef3;
+  border-radius: 8px;
+  padding-left: 15px;
+}
+.email_form label {
+  color: #042668;
+  font-size: 16px;
+}
+.email_form span {
+  color: #042668;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.email_form_btn {
+  height: 50px;
+
+  margin-top: 20px;
+  background: #ec3d5a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.email_form_btn:hover {
+  background: #fff;
+  color: #ec3d5a;
+  border: 2px solid #ec3d5a;
+}
+
+.email_form_card .email_form_navigate{
+       cursor: pointer;
+       color: #073ba1;
+       padding-top: 20px;
+       text-align: center;
+       font-size: 16px;
+}

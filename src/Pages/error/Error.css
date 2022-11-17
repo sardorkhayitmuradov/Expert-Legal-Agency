@@ -1,0 +1,65 @@
+.error_container {
+       width: 1180px;
+       margin: 0 auto;
+       padding: 100px 0;
+       font-family: 'Rubik';
+   }
+   
+   .error_card_parent {
+       display: flex;
+       gap: 50px;
+   }
+   
+   .error_right_card{
+       padding-top: 40px;
+   }
+   
+   .error_right_card h1{
+       font-weight: 500;
+       font-size: 32px;
+       color: #042668;
+       padding-bottom: 30px;
+   }
+   
+   .error_right_card p {
+       font-size: 18px;
+       color: #042668;
+       padding-bottom: 50px;
+       line-height: 26px;
+   }
+   
+   .error_right_card_btns {
+       display: flex;
+       justify-content: center;
+       gap: 30px;
+   }
+   
+   .error_right_card_btns .error_card_light_btn {
+       color: #073BA1;
+       background: #fff;
+       border: 2px solid #073BA1;
+       width: 230px;
+       height: 50px;
+       border-radius: 8px;
+       font-size: 16px;
+   }
+   
+   .error_right_card_btns .error_card_light_btn:hover {
+       color:#fff;
+       background: #073BA1;
+   }
+   
+   .error_right_card_btns .error_card_blue_btn {
+       background: #073BA1;
+       color: #fff;
+       border: 2px solid #073BA1;
+       width: 230px;
+       height: 50px;
+       border-radius: 8px;
+       font-size: 16px;
+   }
+   
+   .error_right_card_btns .error_card_blue_btn:hover {
+       background: #fff;
+       color: #073BA1;
+   }

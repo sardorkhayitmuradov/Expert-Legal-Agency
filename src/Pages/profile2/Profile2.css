@@ -1,0 +1,43 @@
+.profile2-container , .profile3-container {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 60px 0;
+  font-family: 'Rubik';
+}
+
+.profile3-container {
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.profile2-title {
+  font-family: 'Rubik';
+font-weight: 500;
+font-size: 32px;
+line-height: 40px;
+color: #073BA1;
+margin-bottom: 20px;
+}
+
+.profile2-wrapper {
+  width: 100%;
+  height: max-content;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+.profile2-wrapper_right {
+    max-width: 580px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }

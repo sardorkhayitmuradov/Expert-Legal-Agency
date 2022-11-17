@@ -1,0 +1,87 @@
+.personal_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  font-family: "Rubik";
+}
+.personal_card {
+  width: 420px;
+  height: max-content;
+  padding: 70px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 30px;
+}
+
+.personal_card_logo {
+  text-align: center;
+}
+
+.personal_card_content {
+  text-align: center;
+}
+
+.personal_card_content h1 {
+  padding-top: 30px;
+  font-size: 24px;
+  color: #073ba1;
+  font-weight: 500;
+}
+
+.personal_card_content p {
+  padding-top: 20px;
+  color: #042668;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.personal_card_content h3 {
+  color: #073ba1;
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+.personal_card_btns {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal_card_btn1 {
+  height: 50px;
+
+  cursor: pointer;
+  background: #ffffff;
+  color: #073ba1;
+  border: 2px solid #073ba1;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.personal_card_btn1:hover {
+  background: #073ba1;
+  color: #fff;
+}
+
+.personal_card_btn2 {
+  height: 50px;
+
+  cursor: pointer;
+  margin-top: 20px;
+  background: #ec3d5a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.personal_card_btn2:hover {
+  background: #fff;
+  color: #ec3d5a;
+  border: 2px solid #ec3d5a;
+}

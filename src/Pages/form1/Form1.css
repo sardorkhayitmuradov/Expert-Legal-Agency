@@ -1,0 +1,275 @@
+.main {
+  padding: 40px 0 120px;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form1-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.process {
+  max-width: 880px;
+  width: 100%;
+  padding: 20px 0 0;
+}
+
+.process-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.procces-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.process-header-image {
+  margin-right: 16px;
+}
+
+.header-title {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #073ba1;
+  margin-bottom: 10px;
+}
+
+.header-desc {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042668;
+}
+
+/* rating */
+
+.process-rating {
+    max-width: 780px;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-right: auto;
+}
+
+.rating-title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #042668;
+  margin-bottom: 20px;
+}
+
+.rating-radios {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    font-family: 'Rubik';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #042668;
+}
+.radio-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+input:where([type="checkbox"], [type="radio"]) {
+    width: 20px;
+    height: 20px;
+    background: #073BA1;
+    box-shadow: 0px 2px 8px rgba(7, 59, 161, 0.1);
+    margin-right: 8px;
+}
+
+/* Customer */
+
+.customer-info-title , .owner-info-title , .car-left-title , .yourself-title{
+  font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+color: #042668;
+  margin-bottom: 20px;
+}
+
+.inputs-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.hr {
+  width: 100%;
+  display: inline-block;
+  height: 1px;
+  background-color: #EBF2FF;
+  color: #EBF2FF;
+  margin-bottom: 40px;
+}
+/* Owner */
+
+.owner-info{
+  margin-bottom: 40px;
+}
+
+.owner-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Car */
+
+.about-car {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.car-left {
+  max-width: 280px;
+  width: 100%;
+}
+
+.car-left-title {
+margin-bottom: 10px;
+}
+
+.car-left-desc{
+  font-family: 'Rubik';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #042668;
+}
+
+.car-right {
+  max-width: 580px;
+  width: 100%;
+}
+
+.right-top-title {
+  width: 100%;
+  font-family: 'Rubik';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #042668;
+margin-bottom: 10px;
+}
+
+.right-top-btns {
+  margin-bottom: 30px;
+}
+
+.top-btns-btn {
+  font-family: 'Rubik';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: #073BA1;
+  background: #EBF2FF;
+border-radius: 30px;
+  padding: 8px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.car-right-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-bottom-btn {
+  font-family: 'Rubik';
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+color: #FFFFFF;
+  background: #073BA1;
+border-radius: 8px;
+  padding: 15px 55px;
+  border: none;
+}
+
+.top-btns-btn {
+  margin-right: 10px;
+}
+
+.top-btns-btn:active {
+  background: #073BA1;
+color: #FFFFFF;
+}
+
+.card-important {
+  margin-bottom: 40px;
+}
+
+.card-important-title {
+  font-family: 'Rubik';
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+color: #073BA1;
+margin-bottom: 16px;
+}
+
+.card-important-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-important-wrapper-desc {
+  margin-left: 10px;
+}
+
+.yourself-title {
+  margin-bottom: 20px;
+}
+.yourself-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px 0;
+  flex-wrap: wrap;
+}
+.yourself {
+  margin-bottom: 40px;
+}
+
+.form-btn {
+  font-family: 'Rubik';
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+  padding: 13px 115px;
+  background: #EC3D5A;
+border-radius: 8px;
+border: none;
+}

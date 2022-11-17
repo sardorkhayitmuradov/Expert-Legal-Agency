@@ -1,0 +1,19 @@
+.code_inputs_parent {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+.code_inputs_parent .code_input {
+  width: 36px;
+  height: 40px;
+
+  text-align: center;
+  background: #f1f6fb;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+ 
+  
+      

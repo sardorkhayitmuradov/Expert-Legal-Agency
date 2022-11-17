@@ -1,0 +1,45 @@
+.search_card_1_img {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.search_card_1_img img {
+  cursor: pointer;
+}
+
+.search_card_1_img h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #073ba1;
+}
+
+.search_card_1_left_desc p {
+  max-width: 450px;
+
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #042668;
+  padding-bottom: 30px;
+}
+
+.search_card_1_left_btn button {
+  width: 280px;
+  height: 50px;
+
+  cursor: pointer;
+  background: #073ba1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px !important;
+}
+
+.search_card_1_left_btn button:hover {
+  background: #fff;
+  color: #073ba1;
+  border: 2px solid #073ba1;
+}

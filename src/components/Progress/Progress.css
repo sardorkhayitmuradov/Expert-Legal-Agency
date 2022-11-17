@@ -1,0 +1,28 @@
+.procces-header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .process-header-image {
+    margin-right: 16px;
+  }
+  
+  .header-title {
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #073ba1;
+    margin-bottom: 10px;
+  }
+  
+  .header-desc {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #042668;
+  }

@@ -1,0 +1,28 @@
+.fqa__container{
+    width: 1180px;
+    margin: auto;
+    padding: 70px 0;
+    font-family: 'Rubik';
+}
+
+.fqa__label{
+    font-size: 32px;
+    color: #073BA1;
+    font-weight: 500;
+}
+
+.fqa__accordion{
+    padding-top: 60px;
+}
+
+.fqa__accordion__left{
+    width: 300px;
+}
+
+.fqa__accordion__left h2 {
+    font-size: 20px;
+    padding: 20px 0;
+    font-weight: 500;
+    color: #073BA1;
+    border-bottom: 2px solid #EBF2FF;
+}

@@ -1,0 +1,90 @@
+.profile__header__container {
+  width: 1180px;
+  margin: auto;
+
+}
+.profile__header__navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Rubik';
+}
+.profile__header__ul {
+  width: 40%;
+
+  display: flex;
+  justify-content: space-between;
+  line-height: 60px;
+}
+
+.profile__header__ul__link {
+  color: #073BA1;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dropdown__btn {
+  background: transparent;
+  color: #073BA1;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Rubik';
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.bi-chevron-compact-up{
+  color: #073BA1;
+}
+
+.profile__header__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile__header__dropdown__content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+  border-radius: 10px 0px 10px 10px;
+  padding: 0 10px;
+  width: 160px;
+}
+
+.profile__header__dropdown__content span {
+  color: black;
+  padding: 2px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.profile__header__dropdown__content .dropdown__content__links:hover {
+  cursor: pointer;
+}
+
+.profile__header__dropdown:hover .profile__header__dropdown__content {
+  display: block;
+}
+
+.profile__header__dropdown:hover .bi-chevron-compact-up {
+  transition: 0.5s ease;
+  transform: rotate(180deg);
+}
+
+.dropdown__content__links {
+  display: flex;
+}
+
+.dropdown__content__links span {
+  color: #073BA1;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.dropdown__content__links span:hover {
+  font-weight: 500;
+  transition: 0.5s ease;
+}

@@ -1,0 +1,116 @@
+.main{
+    padding: 60px 0 174px 0;
+}
+
+.setting-main {
+    max-width: 880px;
+    width: 100%;
+}
+
+.profile-container  {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.profile-setting {
+    max-width: 280px;
+    width: 100%;
+}
+
+.profile-setting-title{
+    font-family: 'Rubik';
+font-weight: 500;
+font-size: 32px;
+line-height: 40px;
+color: #073BA1;
+margin-bottom: 30px;
+}
+
+.profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile {
+    margin-bottom: 94px;
+}
+
+.profile-title {
+    font-family: 'Rubik';
+font-weight: 500;
+font-size: 24px;
+line-height: 32px;
+color: #073BA1;
+margin-bottom: 20px;
+}
+
+.profile-setting {
+    background: #FFFFFF;
+box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
+border-radius: 10px;
+/* transform: matrix(1, 0, 0, -1, 0, 0); */
+}
+
+.profile-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.setting-item {
+    border: 1px solid #EBF2FF;
+    padding: 20px 0 18px 30px;
+}
+
+.setting-item:active {
+    border-left: 3px solid #073BA1;
+    padding-left: 27px;
+
+}
+
+.tel {
+    margin-bottom: 94px;
+}
+
+.tel-title {
+    font-family: 'Rubik';
+font-weight: 500;
+font-size: 24px;
+line-height: 32px;
+color: #073BA1;
+margin-bottom: 10px;
+}
+
+.tel-desc {
+    font-family: 'Rubik';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #042668;
+margin-bottom: 30px;
+}
+
+.password-title {
+    font-family: 'Rubik';
+font-weight: 500;
+font-size: 24px;
+line-height: 32px;
+color: #073BA1;
+margin-bottom: 10px;
+}
+
+.password-desc {
+    font-family: 'Rubik';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #042668;
+margin-bottom: 30px;
+}
+
+.password-inputs {
+    display: flex;
+    justify-content: space-between;
+}
