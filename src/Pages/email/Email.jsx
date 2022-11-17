@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../Pages/email/Email.css";
 import logo from "../../assets/images/main/logo.svg";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input";
+import axios from "axios";
 
 const Email = () => {
   const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("https://maruf.pythonanywhere.com/api/email/", {
+        email: email,
+      })
+      .then((res) => {
+        const emailToken = res.data.msg;
+        if(!res.data.msg){
+          window.localStorage.setItem('token', emailToken)
+          navigate('/emailcode')
+        }else(
+          console.log("Email Account error!")
+        )
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    setEmail("");
+  };
+
+  const onEmail = (value) => {
+    console.log(value);
+    setEmail(value);
+  };
 
   return (
     <>
@@ -18,7 +47,7 @@ const Email = () => {
             <h1>Сброс пароля</h1>
             <p>Введите ваш email для восстановления доступа</p>
           </div>
-          <form action="#" className="email_form">
+          <form action="#" className="email_form" onSubmit={onSubmit}>
             <Input
               labelName={"Email"}
               inputType={"email"}
@@ -26,8 +55,15 @@ const Email = () => {
               placeholder={"example@gmail.com"}
               descValue={"uft_pole_name"}
               question={false}
+              value={email}
+              onGetValue={onEmail}
             />
-            <input onClick={() => navigate("/emailcode")} type="submit" value={"Далее"} className="email_form_btn" />
+            <input
+              // onClick={() => navigate("/emailcode")}
+              type="submit"
+              value={"Далее"}
+              className="email_form_btn"
+            />
             <span
               className="email_form_navigate"
               onClick={() => navigate("/password")}

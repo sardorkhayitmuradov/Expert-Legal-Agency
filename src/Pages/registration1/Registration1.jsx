@@ -36,7 +36,7 @@ const Registration1 = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://9ba5-185-203-236-98.in.ngrok.io/api/registr/', {
+      .post('https://maruf.pythonanywhere.com/api/registr/', {
         phone_number: userPhone,
         email: userEmail,
         password: userPassword,

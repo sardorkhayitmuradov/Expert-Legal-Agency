@@ -11,7 +11,13 @@ import Filter from "../../components/Filter/Filter";
 import { useNavigate } from "react-router-dom";
 
 const Profile2 = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
 
   return (
     <>
