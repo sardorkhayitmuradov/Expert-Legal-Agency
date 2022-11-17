@@ -34,7 +34,8 @@
 }
 
 .main_form_div {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   gap: 20px;
   padding-top: 16px;
   line-height: 30px;
@@ -71,8 +72,8 @@
   line-height: 16px;
 }
 
-.main_aside_button button {
-  margin-top: 40px;
+.main_form_div button {
+  margin: 20px 0;
   width: 230px;
   height: 50px;
 
@@ -82,7 +83,7 @@
   border-radius: 8px;
 }
 
-.main_aside_button button:hover {
+.main_form_div button:hover {
   background: #fff;
   color: #ec3d5a;
   border: 2px solid #ec3d5a;

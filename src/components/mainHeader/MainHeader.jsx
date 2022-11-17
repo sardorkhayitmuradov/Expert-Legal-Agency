@@ -21,8 +21,13 @@ const MainHeader = () => {
         password: userPassword,
       })
       .then((res) => {
-        console.log(res.data);
-        // navigate('/profile2') 
+        const token = res.data.token;
+        if(res.data.token){
+          window.localStorage.setItem('token', token)
+          navigate('/profile2')
+        }else(
+          alert("ERROR")
+        )
       })
       .catch((err) => {
         console.log(err);
