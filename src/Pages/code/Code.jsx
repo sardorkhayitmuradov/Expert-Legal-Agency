@@ -14,9 +14,13 @@ const Code = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://maruf.pythonanywhere.com/api/accept/', {
+      .post('http://epa.yarbek.uz/api/code/', {
         sms_code:smsCode,
         phone_number:phoneNumber,
+      },{
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        }
       })
       .then((res) => {
         console.log(res.data);

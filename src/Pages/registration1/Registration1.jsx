@@ -3,11 +3,11 @@ import '../../Pages/registration1/Registration1.css';
 import logo from '../../assets/images/main/logo.svg';
 import { Link } from 'react-router-dom';
 import Input from '../../components/Input/Input';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Registration1 = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [userPhone, setUserPhone] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
@@ -39,26 +39,20 @@ const Registration1 = () => {
     e.preventDefault();
     axios
       .post('https://maruf.pythonanywhere.com/api/registr/', {
-        phone_number: userPhone,
-        email: userEmail,
-        password: userPassword, 
-        confirm_password: userConfirmPassword,
-      },{
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-        }
+        "phone_number": userPhone,
+        "email": userEmail,
+        "password": userPassword, 
+        "confirm_password": userConfirmPassword,
       })
       .then((res) => {
-        console.log(res.data);
-        navigate('/code')
+        console.log(res);
+        // navigate('/code')
       })
-      .catch((err) => {
-        console.log(err);
-      });
-    setUserPhone('');
-    setUserEmail('');
-    setUserPassword('');
-    setUserConfirmPassword('');
+      // .catch((err) => {
+      //   console.log(err);
+      // });
+
+    // fetch('https://jsonplaceholder.typicode.com/todos/1').then(response => response.json////()).then(json => console.log(json))
   };
 
   return (
@@ -73,7 +67,7 @@ const Registration1 = () => {
           <form className='reg1_form' onSubmit={onSubmit}>
             <Input
               labelName={'Номер телефона'}
-              inputType={'tel'}
+              inputType={'text'}
               inputId={'userPhone'}
               placeholder={'+7 (900) 000-00-00'}
               value={userPhone}

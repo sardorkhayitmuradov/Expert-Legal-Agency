@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../components/CodeInput/CodeInput.css';
 
 const CodeInput = () => {
-  const [code, setCode] = useState(new Array(4).fill(''));
+  const [code, setCode] = useState(new Array(5).fill(''));
   const handleChange = (el, index) => {
     // onGetNumber(code.join(''));
     if (isNaN(el.value)) return false;
