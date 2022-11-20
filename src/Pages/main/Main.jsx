@@ -10,11 +10,11 @@ import MainService from "../../components/mainService/MainService";
 import MainAccordion from "../../components/mainAccordion/MainAccordion";
 import "./Main.css";
 
-const Main = () => {
+const Main = ({ open, setOpen }) => {
   return (
     <>
       <header className="header">
-        <MainHeader />
+        <MainHeader open={open} setOpen={setOpen} />
       </header>
       <main className="main">
         <section className="hero">

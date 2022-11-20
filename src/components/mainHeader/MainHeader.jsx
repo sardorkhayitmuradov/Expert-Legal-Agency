@@ -9,40 +9,38 @@ import Modal from "@mui/material/Modal";
 import Input from "../../components/Input/Input";
 import axios from "axios";
 
-const MainHeader = () => {
-  const [userPhone , setUserPhone] = useState('')
-  const [userPassword , setUserPassword] = useState('')
+const MainHeader = ({ open, setOpen }) => {
+  const [userPhone, setUserPhone] = useState("");
+  const [userPassword, setUserPassword] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://maruf.pythonanywhere.com/api/login/', {
+      .post("https://maruf.pythonanywhere.com/api/login/", {
         phone_number: userPhone,
         password: userPassword,
       })
       .then((res) => {
         const token = res.data.token;
-        if(res.data.token){
-          window.localStorage.setItem('token', token)
-          navigate('/profile2')
-        }else(
-          alert("ERROR")
-        )
+        if (res.data.token) {
+          window.localStorage.setItem("token", token);
+          navigate("/profile2");
+        } else alert("ERROR");
       })
       .catch((err) => {
         console.log(err);
       });
-    setUserPhone('');
-    setUserPassword('');
-  }
+    setUserPhone("");
+    setUserPassword("");
+  };
 
   const onPhone = (value) => {
-    setUserPhone(value)
-  }
+    setUserPhone(value);
+  };
 
   const onPassword = (value) => {
-    setUserPassword(value)
-  }
+    setUserPassword(value);
+  };
 
   const style = {
     position: "absolute",
@@ -58,7 +56,6 @@ const MainHeader = () => {
   };
 
   const navigate = useNavigate();
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -142,9 +139,7 @@ const MainHeader = () => {
                       value={userPassword}
                       onGetValue={onPassword}
                     />
-                    <button
-                      className="main_modal_form_btn" 
-                    >Войти</button>
+                    <button className="main_modal_form_btn">Войти</button>
                     <NavLink
                       to={"/registration1"}
                       className="main_modal_form_p"
