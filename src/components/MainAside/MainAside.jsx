@@ -1,37 +1,47 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "../MainAside/mainAside.css";
 import phone from "../../assets/images/main/phone-contact.png";
 import Input from "../Input/Input";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const MainAside = () => {
-  const [name,setName] = useState("");
-  const [phoneNumber,setPhoneNumber] = useState("");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const notify = () => toast("Oops! Something get wrong!");
+  const notok = () => toast("We will contact you soon!");
 
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://maruf.pythonanywhere.com/api/aplication/', {
-        name:name,
-        phone_number:phoneNumber,
+      .post("http://epa.yarbek.uz/api/application/", {
+        name: name,
+        phone_number: phoneNumber,
       })
       .then((res) => {
-        console.log(res.data);
+        const status = res.data.status;
+        if (res.data.status === 200) {
+          notok();
+        }
+        if(res.data.status !== 200) {
+          notify();
+        }
       })
       .catch((err) => {
         console.log(err);
       });
     setName("");
     setPhoneNumber("");
-  }
+  };
 
   const onName = (value) => {
     setName(value);
-  }
+  };
 
   const onPhoneNumber = (value) => {
     setPhoneNumber(value);
-  }
+  };
 
   return (
     <>
@@ -70,7 +80,19 @@ const MainAside = () => {
                       onGetValue={onPhoneNumber}
                     />
                   </div>
-                  <button disabled={!phoneNumber}>Отправить</button>
+                  <button>Отправить</button>
+                  <ToastContainer
+              position="bottom-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
                 </form>
                 <div className="main_aside_button">
                   <p>

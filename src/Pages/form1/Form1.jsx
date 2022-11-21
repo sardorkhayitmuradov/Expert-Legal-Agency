@@ -9,6 +9,11 @@ import "./Form1.css";
 import { useNavigate } from "react-router-dom";
 
 const Form1 = () => {
+  React.useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/registration1");
+    }
+  }, []);
   const navigate = useNavigate();
   return (
     <>

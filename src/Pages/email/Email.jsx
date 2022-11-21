@@ -4,10 +4,12 @@ import logo from "../../assets/images/main/logo.svg";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Email = () => {
   const navigate = useNavigate();
-
+  const notify = () => toast("Oops! Something get wrong!");
   const [email, setEmail] = useState("");
 
   const onSubmit = (e) => {
@@ -18,12 +20,14 @@ const Email = () => {
       })
       .then((res) => {
         const emailToken = res.data.msg;
-        if(!res.data.msg){
-          window.localStorage.setItem('token', emailToken)
-          navigate('/emailcode')
-        }else(
-          console.log("Email Account error!")
-        )
+        if (!res.data.msg) {
+          window.localStorage.setItem("token", emailToken);
+          navigate("/emailcode");
+        }
+        if (res.data.msg) {
+          navigate("/email");
+          notify()
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -48,18 +52,17 @@ const Email = () => {
             <p>Введите ваш email для восстановления доступа</p>
           </div>
           <form action="#" className="email_form" onSubmit={onSubmit}>
-            <Input
-              labelName={"Email"}
-              inputType={"email"}
-              inputId={"userEmail"}
-              placeholder={"example@gmail.com"}
-              descValue={"uft_pole_name"}
-              question={false}
-              value={email}
-              onGetValue={onEmail}
-            />
+             <Input
+             labelName={"Email"}
+             inputType={"email"}
+             inputId={"userEmail"}
+             placeholder={"example@gmail.com"}
+             descValue={"uft_pole_name"}
+             question={false}
+             value={email}
+             onGetValue={onEmail}
+           />
             <input
-              // onClick={() => navigate("/emailcode")}
               type="submit"
               value={"Далее"}
               className="email_form_btn"

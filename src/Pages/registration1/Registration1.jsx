@@ -36,7 +36,7 @@ const Registration1 = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('https://maruf.pythonanywhere.com/api/registr/', {
+      .post('http://epa.yarbek.uz/api/reg1/', {
         phone_number: userPhone,
         email: userEmail,
         password: userPassword,

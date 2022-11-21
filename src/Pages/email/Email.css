@@ -16,6 +16,12 @@
   border-radius: 30px;
 }
 
+.error_inp{
+  color: #ec3d5a;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .email_form_img {
   text-align: center;
 }
@@ -70,6 +76,18 @@
   border-radius: 8px;
   font-weight: 500;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.Toastify__toast-theme--dark{
+  background: #ec3d5a !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  height: 80px !important;
+}
+
+.Toastify__progress-bar-theme--dark {
+  background: #fff !important;
 }
 
 .email_form_btn:hover {
