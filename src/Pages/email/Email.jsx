@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Email = () => {
   const navigate = useNavigate();
-  const notify = () => toast("Oops! Something get wrong!");
+  const notify = () => toast("Oops! Something get wrong! Please again...");
   const [email, setEmail] = useState("");
 
   const onSubmit = (e) => {
@@ -19,9 +19,13 @@ const Email = () => {
         email: email,
       })
       .then((res) => {
-        if (res.status === 200 ) {
-          navigate("/emailcode")
+        const mes = res.data.msg.toLowerCase()
+        if (mes == "sended success") {
+          window.localStorage.setItem("email", email);
+          navigate("/emailcode");
         }
+        notify()
+      
       })
       .catch((err) => {
         console.log(err);
@@ -46,20 +50,33 @@ const Email = () => {
             <p>Введите ваш email для восстановления доступа</p>
           </div>
           <form action="#" className="email_form" onSubmit={onSubmit}>
-             <Input
-             labelName={"Email"}
-             inputType={"email"}
-             inputId={"userEmail"}
-             placeholder={"example@gmail.com"}
-             descValue={"uft_pole_name"}
-             question={false}
-             value={email}
-             onGetValue={onEmail}
-           />
+            <Input
+              labelName={"Email"}
+              inputType={"email"}
+              inputId={"userEmail"}
+              placeholder={"example@gmail.com"}
+              descValue={"uft_pole_name"}
+              question={false}
+              value={email}
+              onGetValue={onEmail}
+            />
             <input
               type="submit"
               value={"Далее"}
               className="email_form_btn"
+              disabled={!email}
+            />
+            <ToastContainer
+              position="bottom-right"
+              autoClose={2000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
             />
             <span
               className="email_form_navigate"

@@ -8,10 +8,13 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Input from "../../components/Input/Input";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const MainHeader = ({ open, setOpen }) => {
   const [userPhone, setUserPhone] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  const notify = () => toast("Oops! Log In Error! Please again...");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -28,7 +31,7 @@ const MainHeader = ({ open, setOpen }) => {
           window.localStorage.setItem("phone_number", userPhone);
           navigate("/profile2");
         }else{
-          alert(res.data.error)
+         notify()
         }
       })
       .catch((err) => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../Pages/code/Code.css";
 import logo from "../../assets/images/main/logo.svg";
 import CodeInput from "../../components/CodeInput/CodeInput";
@@ -8,16 +8,28 @@ import axios from "axios";
 
 const Code = () => {
   const navigate = useNavigate();
-  const phoneNumber = window.localStorage.getItem('phone_number')
-  const smsCode = window.localStorage.getItem('sms_code');
-  console.log(phoneNumber,smsCode )
+  const phoneNumber = window.localStorage.getItem('phone_number');
+
+  const [code, setCode] = useState(new Array(5).fill(''));
+
+  const onCodes =(el,index)=> {
+
+    if (isNaN(el.value)) return false;
+
+    setCode([...code.map((d, idx) => (idx === index ? el.value : d))]);
+
+    // Focus next input
+    if (el.nextSibling) {
+      el.nextSibling.focus();
+    }
+
+  }
   
   const onSubmit = (e) => {
-    // console.log(number);
     e.preventDefault();
     axios
       .post('http://epa.yarbek.uz/api/code/', {
-        sms_code:smsCode,
+        sms_code: code.join(""),
         phone_number: phoneNumber,
       },{
         headers: {
@@ -55,10 +67,9 @@ const Code = () => {
               кодом
             </p>
             <p>Код из SMS</p>
-            <CodeInput />
+            <CodeInput onGetCodes={onCodes} code={code} />
             <button
               className="code_card_btn"
-              // onClick={() => navigate("/registration2")}
             >
               Далее
             </button>

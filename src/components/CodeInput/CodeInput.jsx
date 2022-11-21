@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import '../../components/CodeInput/CodeInput.css';
 
-const CodeInput = () => {
-  const [code, setCode] = useState(new Array(5).fill(''));
+const CodeInput = ({onGetCodes, code}) => {
   const handleChange = (el, index) => {
-    // onGetNumber(code.join(''));
-    if (isNaN(el.value)) return false;
-
-    setCode([...code.map((d, idx) => (idx === index ? el.value : d))]);
-
-    // Focus next input
-    if (el.nextSibling) {
-      el.nextSibling.focus();
-    }
+    onGetCodes(el,index);
   };
   return (
     <>
@@ -25,18 +16,13 @@ const CodeInput = () => {
               maxLength={1}
               key={index}
               value={el}
-              onChange={(e) => {
-                handleChange(e.target, index);
-              }}
+              onChange={(e) => handleChange(e.target, index)}
               onFocus={(e) => e.target.select()}
             />
           );
         })}
       </div>
       <p>{code.join('')}</p>
-      {
-        window.localStorage.setItem('sms_code' , code.join(''))
-      }
     </>
   );
 };
