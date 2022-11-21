@@ -7,22 +7,13 @@ import axios from "axios";
 const MainAside = () => {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  // const [price, setPrice] = useState("");
-  // const [count, setCount] = useState("");
-  // const [desc, setDesc] = useState("");
-  // const [category, setCategory] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // https://razer-api.onrender.com/devices
     axios
       .post("http://epa.yarbek.uz/api/fill/aplications/", {
         name: name,
         phone_number: phoneNumber,
-        // price: price,
-        // count: count,
-        // desc: desc,
-        // category: category,
       })
       .then((res) => {
         console.log(res.data);
@@ -32,10 +23,6 @@ const MainAside = () => {
       });
     setName("");
     setPhoneNumber("");
-    // setCategory("");
-    // setCount("");
-    // setDesc("");
-    // setPrice("");
   };
   const onName = (value) => {
     setName(value);
@@ -81,14 +68,6 @@ const MainAside = () => {
                       value={phoneNumber}
                       onGetValue={onPhoneNumber}
                     />
-                    {/* <input
-                      type="number"
-                      onChange={(e) => setPrice(e.target.value)}
-                      value={price}
-                    />
-                    <input type="number" value={count} onChange={(e) => setCount(e.target.value)}/>
-                    <input type="text" value={category}  onChange={(e) => setCategory(e.target.value)}/>
-                    <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)}/> */}
                   </div>
                   <button disabled={!phoneNumber}>Отправить</button>
                 </form>
