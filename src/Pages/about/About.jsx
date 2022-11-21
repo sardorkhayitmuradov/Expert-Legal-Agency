@@ -10,7 +10,7 @@ import { useNavigate , NavLink } from "react-router-dom";
 
 const About = () => {
   React.useEffect(() => {
-    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+    if (!localStorage.getItem("login_token") && !localStorage.getItem("token")) {
       navigate("/");
     }
   }, []);

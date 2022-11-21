@@ -9,10 +9,7 @@ const Setting = () => {
   
   const navigate = useNavigate("");
   React.useEffect(() => {
-    if (
-      !localStorage.getItem("login_token") ||
-      !localStorage.getItem("token")
-    ) {
+    if (!localStorage.getItem("login_token") && !localStorage.getItem("token")) {
       navigate("/");
     }
   }, []);

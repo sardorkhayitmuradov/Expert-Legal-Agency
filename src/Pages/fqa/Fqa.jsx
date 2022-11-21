@@ -23,7 +23,7 @@ const Fqa = () => {
     setExpanded(isExpanded ? panel : false);
   };
   React.useEffect(() => {
-    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+    if (!localStorage.getItem("login_token") && !localStorage.getItem("token")) {
       navigate("/");
     }
   }, []);
