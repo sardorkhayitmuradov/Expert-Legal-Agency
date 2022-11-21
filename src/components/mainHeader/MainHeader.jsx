@@ -21,11 +21,14 @@ const MainHeader = ({ open, setOpen }) => {
         password: userPassword,
       })
       .then((res) => {
-        const token = res.data.token;
+        const loginToken = res.data.token;
+        console.log(res.data)
         if (res.data.token) {
-          window.localStorage.setItem("token", token);
+          window.localStorage.setItem("login_token", loginToken);
           navigate("/profile2");
-        } else alert("ERROR");
+        }else{
+          alert(res.data.error)
+        }
       })
       .catch((err) => {
         console.log(err);

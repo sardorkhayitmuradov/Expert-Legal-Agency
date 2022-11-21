@@ -1,30 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../Pages/code/Code.css";
 import logo from "../../assets/images/main/logo.svg";
 import CodeInput from "../../components/CodeInput/CodeInput";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+// import {Context as NumberContext} from '../../Context/phoneNumber/phoneNumber'
 
 const Code = () => {
   const navigate = useNavigate();
   const phoneNumber = window.localStorage.getItem('phone_number')
   const smsCode = window.localStorage.getItem('sms_code');
-  console.log(smsCode)
+  console.log(phoneNumber,smsCode )
   
   const onSubmit = (e) => {
+    // console.log(number);
     e.preventDefault();
     axios
       .post('http://epa.yarbek.uz/api/code/', {
         sms_code:smsCode,
-        phone_number:phoneNumber,
+        phone_number: phoneNumber,
       },{
         headers: {
           "Access-Control-Allow-Origin": "*",
         }
       })
       .then((res) => {
-        console.log(res.data);
-        // navigate('/profile2') 
+        if(res.data){
+          console.log(res.data.status === 1);
+          navigate('/profile2') 
+        }
       })
       .catch((err) => {
         console.log(err);

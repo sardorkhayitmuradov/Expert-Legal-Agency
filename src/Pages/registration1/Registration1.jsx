@@ -13,11 +13,9 @@ const Registration1 = ({ setOpen }) => {
   const [userPassword, setUserPassword] = useState("");
   const [userConfirmPassword, setUserConfirmPassword] = useState("");
 
-  window.localStorage.setItem("phone_number", userPhone);
 
   const onUserphone = (value) => {
-    console.log(value);
-    setUserPhone(value);
+    setUserPhone(value)
   };
 
   const onUserEmail = (value) => {
@@ -37,6 +35,8 @@ const Registration1 = ({ setOpen }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    window.localStorage.setItem("phone_number", userPhone)
+
     axios
       .post("http://epa.yarbek.uz/api/reg1/", {
         phone_number: userPhone,
@@ -46,16 +46,15 @@ const Registration1 = ({ setOpen }) => {
       })
       
       .then((res) => {
-        const reg1 = res.data.token;
-        if (res.data.token) {
-          window.localStorage.setItem("reg1", reg1);
+        if(res.data.status === 1){
+          window.localStorage.setItem('token', res.data.token);
+          console.log(res.data);
           navigate("/registration2");
-        } else alert("ERROR");
+        }
       })
       .catch((err) => {
         console.log(err);
       });
-    setUserPhone("");
     setUserEmail("");
     setUserPassword("");
     setUserConfirmPassword("");

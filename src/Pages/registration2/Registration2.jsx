@@ -7,7 +7,8 @@ import axios from 'axios';
 
 const Registration2 = () => {
   const navigate = useNavigate();
-  const reg1 = window.localStorage.getItem('reg1');
+
+  const token = window.localStorage.getItem('token');
 
   const [userLastName, setUserLastName] = useState('');
   const [userName, setUserName] = useState('');
@@ -45,21 +46,23 @@ const Registration2 = () => {
         {
           headers: {
             'Access-Control-Allow-Origin': '*',
-            Authorization: `Bearer ${reg1}`
+            Authorization: `Bearer ${token}`
           },
         }
       )
       .then((res) => {
-        console.log(res.data);
-        navigate('/code')
+        if(res.data.status === 1){
+          console.log(res.data);
+          navigate('/code')
+        }
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err);  
       });
   };
 
   React.useEffect(() => {
-    if (!localStorage.getItem("reg1")) {
+    if (!localStorage.getItem("token")) {
       navigate("/registration1");
     }
   }, []);
