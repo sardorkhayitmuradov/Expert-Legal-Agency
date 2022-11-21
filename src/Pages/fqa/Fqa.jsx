@@ -13,8 +13,10 @@ import two from "../../assets/images/main/number-2.svg";
 import three from "../../assets/images/main/number-3.svg";
 import four from "../../assets/images/main/number-4.svg";
 import five from "../../assets/images/main/number-5.svg";
+import { useNavigate } from "react-router-dom";
 
 const Fqa = () => {
+  const navigate = useNavigate("");
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
