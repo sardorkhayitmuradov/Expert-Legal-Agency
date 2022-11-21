@@ -16,7 +16,7 @@ const MainHeader = ({ open, setOpen }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://maruf.pythonanywhere.com/api/login/", {
+      .post("http://epa.yarbek.uz/api/login/", {
         phone_number: userPhone,
         password: userPassword,
       })
