@@ -13,6 +13,11 @@ import success from "../../assets/images/main/checkbox-success.svg";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  React.useEffect(() => {
+    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
   const navigate = useNavigate();
   return (
     <>

@@ -9,6 +9,11 @@ import Progress from "../../components/Progress/Progress";
 import { useNavigate } from "react-router-dom";
 
 const Form1 = () => {
+  React.useEffect(() => {
+    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
   const navigate = useNavigate();
   return (
     <>

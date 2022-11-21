@@ -119,7 +119,7 @@ const Registration1 = ({ setOpen }) => {
               </span>
             </p>
             <button className="reg1_form_btn" disabled={!userConfirmPassword}>Сохранить</button>
-            <Link
+            <Link to="/"
               className="reg1_form_link"
               onClick={() => setOpen(true)}
             >

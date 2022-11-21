@@ -5,6 +5,11 @@ import Input from '../../components/Input/Input';
 import './Setting.css';
 
 const Setting = () => {
+  React.useEffect(() => {
+    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
   return (
     <>
       <header className='header'>

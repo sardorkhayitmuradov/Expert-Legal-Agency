@@ -20,6 +20,11 @@ const Fqa = () => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+  React.useEffect(() => {
+    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
   return (
     <>
       <ProfileHeader />

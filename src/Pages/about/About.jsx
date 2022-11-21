@@ -9,6 +9,11 @@ import Footer from "../../components/Footer/Footer";
 import { useNavigate , NavLink } from "react-router-dom";
 
 const About = () => {
+  React.useEffect(() => {
+    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+      navigate("/");
+    }
+  }, []);
   const navigate =useNavigate()
   return (
     <>
