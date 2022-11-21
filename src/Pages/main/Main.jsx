@@ -9,12 +9,17 @@ import MainFaceRating from "../../components/mainFaceRating/mainFaceRating";
 import MainService from "../../components/mainService/MainService";
 import MainAccordion from "../../components/mainAccordion/MainAccordion";
 import "./Main.css";
+import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
 
-const Main = () => {
+const Main = ({ open, setOpen }) => {
   return (
     <>
       <header className="header">
-        <MainHeader />
+       {window.localStorage.getItem("token") ? (
+        <ProfileHeader/>
+       ):(
+        <MainHeader open={open} setOpen={setOpen} />
+       )}
       </header>
       <main className="main">
         <section className="hero">

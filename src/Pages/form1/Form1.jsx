@@ -10,8 +10,13 @@ import { useNavigate } from "react-router-dom";
 
 const Form1 = () => {
   React.useEffect(() => {
+<<<<<<< HEAD
     if (!localStorage.getItem("token")) {
       navigate("/registration1");
+=======
+    if (!localStorage.getItem("login_token") || !localStorage.getItem("token")) {
+      navigate("/");
+>>>>>>> 9b4823f5a9861754af6bec6693d79cea8732685f
     }
   }, []);
   const navigate = useNavigate();
