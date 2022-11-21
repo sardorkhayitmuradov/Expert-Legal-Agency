@@ -44,9 +44,13 @@ const Registration1 = ({ setOpen }) => {
         password: userPassword,
         confirm_password: userConfirmPassword,
       })
+      
       .then((res) => {
-        console.log(res.data);
-        navigate("/code");
+        const reg1 = res.data.token;
+        if (res.data.token) {
+          window.localStorage.setItem("reg1", reg1);
+          navigate("/registration2");
+        } else alert("ERROR");
       })
       .catch((err) => {
         console.log(err);
@@ -115,9 +119,8 @@ const Registration1 = ({ setOpen }) => {
                 обработку персональных данных.
               </span>
             </p>
-            <button className="reg1_form_btn">Сохранить</button>
+            <button className="reg1_form_btn" disabled={!userConfirmPassword}>Сохранить</button>
             <Link
-              to="/"
               className="reg1_form_link"
               onClick={() => setOpen(true)}
             >

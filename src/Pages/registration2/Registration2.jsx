@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../../Pages/registration2/Registration2.css';
 import logo from '../../assets/images/main/logo.svg';
 import Input from '../../components/Input/Input';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Registration2 = () => {
-  // const navigate = useNavigate();
-  const token = window.localStorage.getItem('token');
+  const navigate = useNavigate();
+  const reg1 = window.localStorage.getItem('reg1');
 
   const [userLastName, setUserLastName] = useState('');
   const [userName, setUserName] = useState('');
@@ -35,7 +35,7 @@ const Registration2 = () => {
 
     axios
       .post(
-        'https://maruf.pythonanywhere.com/api/prof/',
+        'http://epa.yarbek.uz/api/reg2/',
         {
           last_name: userLastName,
           first_name: userName,
@@ -45,18 +45,24 @@ const Registration2 = () => {
         {
           headers: {
             'Access-Control-Allow-Origin': '*',
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${reg1}`
           },
         }
       )
       .then((res) => {
         console.log(res.data);
-        // navigate('/profile2')
+        navigate('/code')
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
+  React.useEffect(() => {
+    if (!localStorage.getItem("reg1")) {
+      navigate("/registration1");
+    }
+  }, []);
 
   return (
     <>

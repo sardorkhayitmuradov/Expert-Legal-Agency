@@ -31,6 +31,12 @@ const Code = () => {
       });
   }
 
+  React.useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/registration1");
+    }
+  }, []);
+
   return (
     <>
       <div className="code_container">

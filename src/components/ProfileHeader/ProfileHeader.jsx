@@ -8,7 +8,7 @@ import logout from "../../assets/images/main/logout.svg";
 import { useNavigate } from "react-router-dom";
 
 const ProfileHeader = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     window.scrollTo({
@@ -16,7 +16,7 @@ const ProfileHeader = () => {
       behavior: "smooth",
     });
   }, []);
-  
+
   return (
     <>
       <nav>
@@ -82,7 +82,14 @@ const ProfileHeader = () => {
                     </Link>
                     <a className="dropdown__content__links">
                       <img src={logout} alt="LogOut" />
-                      <span onClick={() => navigate("/")}>Выйти</span>
+                      <span
+                        onClick={() => {
+                          window.localStorage.removeItem("token");
+                          window.location.reload();
+                        }}
+                      >
+                        Выйти
+                      </span>
                     </a>
                   </div>
                 </div>
