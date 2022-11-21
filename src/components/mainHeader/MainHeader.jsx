@@ -9,25 +9,27 @@ import Modal from "@mui/material/Modal";
 import Input from "../../components/Input/Input";
 import axios from "axios";
 
-const MainHeader = () => {
+const MainHeader = ({ open, setOpen }) => {
   const [userPhone, setUserPhone] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://maruf.pythonanywhere.com/api/login/", {
+      .post("http://epa.yarbek.uz/api/login/", {
         phone_number: userPhone,
         password: userPassword,
       })
       .then((res) => {
-        const token = res.data.token;
+        const loginToken = res.data.token;
+        console.log(res.data)
         if (res.data.token) {
-          window.localStorage.setItem("token", token);
+          window.localStorage.setItem("login_token", loginToken);
+          window.localStorage.setItem("phone_number", userPhone);
           navigate("/profile2");
-        }else(
-          navigate("/")
-        )
+        }else{
+          alert(res.data.error)
+        }
       })
       .catch((err) => {
         console.log(err);

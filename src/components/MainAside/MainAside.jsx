@@ -15,11 +15,7 @@ const MainAside = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-<<<<<<< HEAD
-      .post("http://epa.yarbek.uz/api/application/", {
-=======
       .post("http://epa.yarbek.uz/api/fill/aplications/", {
->>>>>>> 9b4823f5a9861754af6bec6693d79cea8732685f
         name: name,
         phone_number: phoneNumber,
       })
@@ -38,10 +34,6 @@ const MainAside = () => {
     setName("");
     setPhoneNumber("");
   };
-<<<<<<< HEAD
-
-=======
->>>>>>> 9b4823f5a9861754af6bec6693d79cea8732685f
   const onName = (value) => {
     setName(value);
   };

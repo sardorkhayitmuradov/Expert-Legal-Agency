@@ -9,7 +9,7 @@
   font-family: 'Rubik';
 }
 .profile__header__ul {
-  width: 40%;
+  width: 50%;
 
   display: flex;
   justify-content: space-between;

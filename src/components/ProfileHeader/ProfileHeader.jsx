@@ -84,8 +84,8 @@ const ProfileHeader = () => {
                       <img src={logout} alt="LogOut" />
                       <span
                         onClick={() => {
-                          window.localStorage.clear();
                           window.location.reload();
+                          window.localStorage.clear();
                         }}
                       >
                         Выйти

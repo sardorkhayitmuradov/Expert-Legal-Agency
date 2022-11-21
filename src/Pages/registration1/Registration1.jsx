@@ -38,11 +38,7 @@ const Registration1 = ({ setOpen }) => {
     window.localStorage.setItem("phone_number", userPhone)
 
     axios
-<<<<<<< HEAD
-      .post('http://epa.yarbek.uz/api/reg1/', {
-=======
       .post("http://epa.yarbek.uz/api/reg1/", {
->>>>>>> 9b4823f5a9861754af6bec6693d79cea8732685f
         phone_number: userPhone,
         email: userEmail,
         password: userPassword,

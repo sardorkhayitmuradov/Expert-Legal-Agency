@@ -15,18 +15,12 @@ const Email = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://maruf.pythonanywhere.com/api/email/", {
+      .post("http://epa.yarbek.uz/api/email/", {
         email: email,
       })
       .then((res) => {
-        const emailToken = res.data.msg;
-        if (!res.data.msg) {
-          window.localStorage.setItem("token", emailToken);
-          navigate("/emailcode");
-        }
-        if (res.data.msg) {
-          navigate("/email");
-          notify()
+        if (res.status === 200 ) {
+          navigate("/emailcode")
         }
       })
       .catch((err) => {
