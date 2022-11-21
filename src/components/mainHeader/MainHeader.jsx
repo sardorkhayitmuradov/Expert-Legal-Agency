@@ -16,16 +16,19 @@ const MainHeader = ({ open, setOpen }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://maruf.pythonanywhere.com/api/login/", {
+      .post("http://epa.yarbek.uz/api/login/", {
         phone_number: userPhone,
         password: userPassword,
       })
       .then((res) => {
         const token = res.data.token;
+        console.log(res.data)
         if (res.data.token) {
           window.localStorage.setItem("token", token);
           navigate("/profile2");
-        } else alert("ERROR");
+        }else{
+          alert(res.data.error)
+        }
       })
       .catch((err) => {
         console.log(err);

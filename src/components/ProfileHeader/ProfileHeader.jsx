@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const ProfileHeader = () => {
   const navigate = useNavigate()
+  const phoneNumber = window.localStorage.getItem('phone_number');
 
   React.useEffect(() => {
     window.scrollTo({
@@ -53,7 +54,7 @@ const ProfileHeader = () => {
               <li>
                 <div className="profile__header__dropdown">
                   <button className="dropdown__btn">
-                    Максим П.{" "}
+                    {phoneNumber}{" "}
                     <span className="dropdown__btn__span">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -80,10 +81,10 @@ const ProfileHeader = () => {
                       <img src={help} alt="Help" />
                       <span>Помощь</span>
                     </Link>
-                    <a className="dropdown__content__links">
+                    <NavLink className="dropdown__content__links">
                       <img src={logout} alt="LogOut" />
                       <span onClick={() => navigate("/")}>Выйти</span>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </li>

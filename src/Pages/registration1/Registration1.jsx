@@ -4,6 +4,7 @@ import logo from "../../assets/images/main/logo.svg";
 import { Link } from "react-router-dom";
 import Input from "../../components/Input/Input";
 import { useNavigate } from "react-router-dom";
+// import { Context as NumberContext } from "../../Context/phoneNumber/phoneNumber";
 import axios from "axios";
 
 const Registration1 = ({ setOpen }) => {
@@ -13,11 +14,13 @@ const Registration1 = ({ setOpen }) => {
   const [userPassword, setUserPassword] = useState("");
   const [userConfirmPassword, setUserConfirmPassword] = useState("");
 
-  window.localStorage.setItem("phone_number", userPhone);
+  // const { number ,setNumber } = useContext(NumberContext);
+  // window.localStorage.setItem("phone_number", userPhone);
 
   const onUserphone = (value) => {
-    console.log(value);
-    setUserPhone(value);
+    setUserPhone(value)
+    // console.log(value);
+    // setNumber(value);
   };
 
   const onUserEmail = (value) => {
@@ -37,6 +40,8 @@ const Registration1 = ({ setOpen }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    window.localStorage.setItem("phone_number", userPhone)
+
     axios
       .post("http://epa.yarbek.uz/api/reg1/", {
         phone_number: userPhone,
@@ -45,13 +50,15 @@ const Registration1 = ({ setOpen }) => {
         confirm_password: userConfirmPassword,
       })
       .then((res) => {
-        console.log(res.data);
-        navigate("/code");
+        if(res.data.status === 1){
+          window.localStorage.setItem('token', res.data.token);
+          console.log(res.data);
+          navigate("/code");
+        }
       })
       .catch((err) => {
         console.log(err);
       });
-    setUserPhone("");
     setUserEmail("");
     setUserPassword("");
     setUserConfirmPassword("");
