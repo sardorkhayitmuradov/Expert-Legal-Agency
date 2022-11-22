@@ -53,7 +53,8 @@
     padding: 7px 0;
 }
 
-.order__new__details h5{
+.order__new__details h5,
+.order__new__inputs h5{
     padding-top: 30px;
     padding-bottom: 15px;
     color: #042668;
@@ -95,4 +96,33 @@
     color: #073BA1;
     font-size: 14px;
     font-weight: 400;
+}
+
+.order__new__content{
+    display: flex;
+    gap: 70px;
+}
+
+.order__new__inputs1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #EBF2FF;
+}
+
+.order__new__inputs2 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #EBF2FF;
+}
+
+.order__new__inputs3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #EBF2FF;
 }
