@@ -3,14 +3,13 @@ import "../MainAside/mainAside.css";
 import phone from "../../assets/images/main/phone-contact.png";
 import Input from "../Input/Input";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const MainAside = () => {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const notify = () => toast("Oops! Something get wrong!");
-  const notok = () => toast("We will contact you soon!");
+  const notify = () => toast("We will contact you soon!");
+  const notok = () => toast("Oops! Something get wrong!");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -20,12 +19,12 @@ const MainAside = () => {
         phone_number: phoneNumber,
       })
       .then((res) => {
-        const status = res.data.status;
-        if (res.data.status === 200) {
-          notok();
-        }
-        if(res.data.status !== 200) {
+        console.log(res);
+        if (res.data.status === 1) {
           notify();
+        }
+        if (res.data.status !== 1) {
+          notok();
         }
       })
       .catch((err) => {
@@ -79,19 +78,16 @@ const MainAside = () => {
                       onGetValue={onPhoneNumber}
                     />
                   </div>
-                  <button>Отправить</button>
-                  <ToastContainer
-              position="bottom-right"
-              autoClose={3000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="dark"
-            />
+                  <button disabled={!phoneNumber}>Отправить</button>
+                  <Toaster
+                    toastOptions={{
+                      style: {
+                        background: "#073ba1",
+                        padding: "16px",
+                        color: "#fff",
+                      },
+                    }}
+                  />
                 </form>
                 <div className="main_aside_button">
                   <p>

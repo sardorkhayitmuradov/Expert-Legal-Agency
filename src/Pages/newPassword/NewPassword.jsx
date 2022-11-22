@@ -4,10 +4,9 @@ import logo from "../../assets/images/main/logo.svg";
 import Input from "../../components/Input/Input";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
-const NewPassword = () => {
+const NewPassword = ({setOpen}) => {
   const navigate = useNavigate();
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
@@ -41,8 +40,14 @@ const NewPassword = () => {
         }
       )
       .then((res) => {
-        notify();
-        
+        if(res.data.status === 1) {
+          navigate("/")
+          setOpen(true)
+        } 
+        if(res.data.status !== 1){
+          notify()
+          navigate("/newpassword")
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -87,7 +92,15 @@ const NewPassword = () => {
               type="submit"
               value="Сохранить"
             />
-            
+            <Toaster
+              toastOptions={{
+                style: {
+                  background: "#073ba1",
+                  padding: "16px",
+                  color: "#fff",
+                },
+              }}
+            />
           </form>
         </div>
       </div>

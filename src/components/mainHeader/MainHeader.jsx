@@ -8,8 +8,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Input from "../../components/Input/Input";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const MainHeader = ({ open, setOpen }) => {
   const [userPhone, setUserPhone] = useState("");
@@ -25,13 +24,13 @@ const MainHeader = ({ open, setOpen }) => {
       })
       .then((res) => {
         const loginToken = res.data.token;
-        console.log(res.data)
+        console.log(res.data);
         if (res.data.token) {
           window.localStorage.setItem("login_token", loginToken);
           window.localStorage.setItem("phone_number", userPhone);
           navigate("/profile2");
-        }else{
-         notify()
+        } else {
+          notify();
         }
       })
       .catch((err) => {
@@ -147,6 +146,15 @@ const MainHeader = ({ open, setOpen }) => {
                       onGetValue={onPassword}
                     />
                     <button className="main_modal_form_btn">Войти</button>
+                    <Toaster
+                      toastOptions={{
+                        style: {
+                          background: "#073ba1",
+                          padding: "16px",
+                          color: "#fff",
+                        },
+                      }}
+                    />
                     <NavLink
                       to={"/registration1"}
                       className="main_modal_form_p"

@@ -3,6 +3,7 @@ import "../../Pages/password/Password.css";
 import logo from "../../assets/images/main/logo.svg";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input";
+import axios from "axios";
 
 const Password = () => {
   const navigate = useNavigate();

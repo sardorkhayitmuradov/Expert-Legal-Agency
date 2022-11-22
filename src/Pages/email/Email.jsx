@@ -4,12 +4,12 @@ import logo from "../../assets/images/main/logo.svg";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const Email = () => {
   const navigate = useNavigate();
   const notify = () => toast("Oops! Something get wrong! Please again...");
+
   const [email, setEmail] = useState("");
 
   const onSubmit = (e) => {
@@ -19,13 +19,12 @@ const Email = () => {
         email: email,
       })
       .then((res) => {
-        const mes = res.data.msg.toLowerCase()
+        const mes = res.data.msg.toLowerCase();
         if (mes == "sended success") {
           window.localStorage.setItem("email", email);
           navigate("/emailcode");
         }
-        notify()
-      
+        notify();
       })
       .catch((err) => {
         console.log(err);
@@ -66,17 +65,14 @@ const Email = () => {
               className="email_form_btn"
               disabled={!email}
             />
-            <ToastContainer
-              position="bottom-right"
-              autoClose={2000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="dark"
+            <Toaster
+              toastOptions={{
+                style: {
+                  background: "#073ba1",
+                  padding: "16px",
+                  color: "#fff",
+                },
+              }}
             />
             <span
               className="email_form_navigate"

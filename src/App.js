@@ -37,7 +37,7 @@ function App() {
         <Route path="/form2" element={<Form2 />} />
         <Route path="/fqa" element={<Fqa />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/newpassword" element={<NewPassword />} />
+        <Route path="/newpassword" element={<NewPassword setOpen={setOpen}  />} />
         <Route path="/ordernew" element={<OrderNew />} />
         <Route path="/password" element={<Password />} />
         <Route path="/personal" element={<Personal />} />

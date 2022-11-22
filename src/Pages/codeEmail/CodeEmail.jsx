@@ -4,8 +4,7 @@ import logo from "../../assets/images/main/logo.svg";
 import CodeInput from "../../components/CodeInput/CodeInput";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const CodeEmail = () => {
   const notify = () => toast("Oops! Something get wrong! Please again...");
@@ -72,18 +71,15 @@ const CodeEmail = () => {
             >
               Далее
             </button>
-            <ToastContainer
-              position="bottom-right"
-              autoClose={2000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="dark"
-            />
+            <Toaster
+                    toastOptions={{
+                      style: {
+                        background: "#073ba1",
+                        padding: "16px",
+                        color: "#fff",
+                      },
+                    }}
+                  />
           </div>
         </div>
       </div>
