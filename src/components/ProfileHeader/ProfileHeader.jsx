@@ -5,6 +5,7 @@ import logo from "../../assets/images/main/logo.svg";
 import setting from "../../assets/images/main/setting.svg";
 import help from "../../assets/images/main/help.svg";
 import logout from "../../assets/images/main/logout.svg";
+import { HashLink } from 'react-router-hash-link';
 
 const ProfileHeader = () => {
   const phoneNumber = window.localStorage.getItem('phone_number');
@@ -36,9 +37,11 @@ const ProfileHeader = () => {
             </NavLink>
             <ul className="profile__header__ul">
               <li>
-                <NavLink to={"/profile2"} className="profile__header__ul__link">
+                <HashLink smooth to={"/profile2#my_orders"} className="profile__header__ul__link">
                   Мои заказы
-                </NavLink>
+                </HashLink>
+              </li>
+              <li>
               </li>
               <li>
                 <NavLink to={"/services"} className="profile__header__ul__link">

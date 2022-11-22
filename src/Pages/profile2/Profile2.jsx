@@ -9,6 +9,9 @@ import Status from "../../components/Status/Status";
 import MyOrder from "../../components/My Order/MyOrder";
 import Filter from "../../components/Filter/Filter";
 import { useNavigate } from "react-router-dom";
+import MainHeader from "../../components/mainHeader/MainHeader";
+
+
 
 const Profile2 = () => {
   const navigate = useNavigate();
@@ -21,7 +24,12 @@ const Profile2 = () => {
 
   return (
     <>
-      <ProfileHeader />
+       {!localStorage.getItem("token") &&
+      !localStorage.getItem("login_token") ? (
+        <MainHeader  />
+      ) : (
+        <ProfileHeader />
+      )}
       <main className="main">
         <section className="profile-section">
           <div className="profile2-container">
@@ -82,7 +90,7 @@ const Profile2 = () => {
         <section className="profile-orders">
           <div className="profile3-container">
             <div>
-              <h2 className="profile2-title">МОИ ЗАКАЗЫ</h2>
+              <h2 id="my_orders" className="profile2-title">МОИ ЗАКАЗЫ</h2>
               <MyOrder>
                 <Status progress={"В работе"} />
               </MyOrder>

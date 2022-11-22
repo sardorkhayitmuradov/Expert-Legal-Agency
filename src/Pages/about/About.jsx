@@ -7,6 +7,7 @@ import phone from "../../assets/images/main/phone.svg";
 import email from "../../assets/images/main/email.svg";
 import Footer from "../../components/Footer/Footer";
 import { useNavigate , NavLink } from "react-router-dom";
+import MainHeader from "../../components/mainHeader/MainHeader";
 
 const About = () => {
   React.useEffect(() => {
@@ -17,7 +18,12 @@ const About = () => {
   const navigate =useNavigate()
   return (
     <>
-      <ProfileHeader />
+     {!localStorage.getItem("token") &&
+      !localStorage.getItem("login_token") ? (
+        <MainHeader />
+      ) : (
+        <ProfileHeader />
+      )}
       <div className="about__container">
         <h1 className="about__label">О КОМПАНИИ</h1>
         <div className="about__company__parent">

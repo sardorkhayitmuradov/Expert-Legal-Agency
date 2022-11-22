@@ -7,19 +7,25 @@ import bankIcon from "../../assets/images/main/sberbank.svg";
 import "./Form2.css";
 import Progress from "../../components/Progress/Progress";
 import { useNavigate } from "react-router-dom";
+import ProfileHeader from '../../components/ProfileHeader/ProfileHeader';
 
 const Form1 = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
     if (!localStorage.getItem("login_token") && !localStorage.getItem("token")) {
-      navigate("/");
+      navigate("/form1");
     }
   }, []);
 
   return (
     <>
-      <MainHeader />
+       {!localStorage.getItem("token") &&
+      !localStorage.getItem("login_token") ? (
+        <MainHeader />
+      ) : (
+        <ProfileHeader />
+      )}
       <main className="main">
         <section className="form2">
           <div className="container form2-container">
@@ -103,7 +109,7 @@ const Form1 = () => {
                 <button
                   type="submit"
                   className="form-btn"
-                  onClick={() => navigate("/profile2")}
+                  onClick={() => navigate("/ordernew")}
                 >
                   Далее
                 </button>

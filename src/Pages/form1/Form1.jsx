@@ -7,19 +7,28 @@ import progressIcon from "../../assets/images/main/progress.svg";
 import infoIcon from "../../assets/images/main/info.svg";
 import "./Form1.css";
 import { useNavigate } from "react-router-dom";
+import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
 
 const Form1 = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (!localStorage.getItem("login_token") && !localStorage.getItem("token")) {
-      navigate("/");
+    if (
+      !localStorage.getItem("login_token") &&
+      !localStorage.getItem("token")
+    ) {
+      navigate("/profile2");
     }
   }, []);
 
   return (
     <>
-      <MainHeader />
+      {!localStorage.getItem("token") &&
+      !localStorage.getItem("login_token") ? (
+        <MainHeader />
+      ) : (
+        <ProfileHeader />
+      )}
       <main className="main">
         <section className="form1">
           <div className="container form1-container">
