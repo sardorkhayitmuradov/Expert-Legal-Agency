@@ -5,17 +5,17 @@
   flex-direction: column;
 }
 
-input  {
-  font-family: 'Rubik';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-color: #042668;
+input {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #042668;
 }
 
 .label {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -25,9 +25,9 @@ color: #042668;
 }
 
 .label-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input {
@@ -46,7 +46,7 @@ color: #042668;
 }
 
 .input::placeholder {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -54,15 +54,17 @@ color: #042668;
 }
 
 .desc {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
   color: #042668;
 }
 
-::-webkit-datetime-edit-month-field  , ::-webkit-datetime-edit-day-field , ::-webkit-datetime-edit-year-field{
-  font-family: 'Rubik';
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field {
+  font-family: "Rubik";
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -71,9 +73,8 @@ color: #042668;
 }
 
 ::-webkit-calendar-picker-indicator {
-  background: url('../../assets/images/main/date.svg');
+  background: url("../../assets/images/main/date.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
