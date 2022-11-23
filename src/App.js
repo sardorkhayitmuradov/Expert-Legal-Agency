@@ -33,7 +33,7 @@ function App() {
         <Route path="/code" element={<Code />} />
         <Route path="/emailcode" element={<CodeEmail />} />
         <Route path="/email" element={<Email />} />
-        <Route path="/form1" element={<Form1 />} />
+        <Route path="/form1" element={<Form1 setOpen={setOpen} />} />
         <Route path="/form2" element={<Form2 />} />
         <Route path="/fqa" element={<Fqa />} />
         <Route path="/login" element={<Login />} />

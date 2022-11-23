@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import flatIcon from "../../assets/images/main/flat.svg";
 import landPilotIcon from "../../assets/images/main/land plot.svg";
 import houseIcon from "../../assets/images/main/house.svg";
@@ -8,12 +8,29 @@ import wareHouseIcon from "../../assets/images/main/warehouse.svg";
 import timeIcon from "../../assets/images/main/time.svg";
 import { useNavigate } from "react-router-dom";
 import "./mainFaceRating.css";
+import axios from "axios";
 
 const MainFaceRating = () => {
+
+  // const [orders, setOrders] = useState([]);
+
+  // useEffect(() => {
+  //   axios
+  //   .get("http://epa.yarbek.uz/api/category/")
+  //   .then((res) => {
+  //     setOrders(res.data);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }, []);
+
+  // console.log(orders);
+
   const navigate = useNavigate();
   return (
     <>
-      <h2 className="rating__title">ПОПУЛЯРНЫЕ ОЦЕНКИ</h2>
+      <h2 className="rating__title">ЗАКАЗАТЬ ОЦЕНКУ</h2>
       <div className="rating__nav">
         <p className="rating__nav__title">Недвижимое имущество</p>
         <p className="rating__nav__title">Активы и аренда</p>

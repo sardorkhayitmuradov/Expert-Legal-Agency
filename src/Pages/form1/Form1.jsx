@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../../components/Card/Card";
 import MainHeader from "../../components/mainHeader/MainHeader";
 import Input from "../../components/Input/Input";
@@ -8,18 +8,156 @@ import infoIcon from "../../assets/images/main/info.svg";
 import "./Form1.css";
 import { useNavigate } from "react-router-dom";
 import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
+import axios from "axios";
+import { useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
-const Form1 = () => {
+const Form1 = ({ setOpen }) => {
+  const [file, setFile] = useState();
+  const notify = () => toast("Oops! Something get wrong! Please again...");
+  const [loginToken, setLoginToken] = useState(
+    window.localStorage.getItem("login_token")
+  );
   const navigate = useNavigate();
+  // form1 start
+  const [chooseTheDirection, setChooseTheDirection] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [secondName, setSecondName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [placeResidence, setPlaceResidence] = useState("");
+  const [fullNameOwner, setFullNameOwner] = useState("");
+  const [ownewDateDeath, setOwnerDateDeath] = useState("");
+  const [deathCertificate, setDeathCertificate] = useState("");
+  const [vin, setVin] = useState("");
+  const [modelCar, setModelCar] = useState("");
+  const [yearIssue, setYearIssue] = useState("");
+  const [notarilaPlace, setNotarialPlace] = useState("");
+  const [image, setImage] = useState("");
 
-  React.useEffect(() => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://epa.yarbek.uz/api/create/order/", {
+        choose_the_direction_of_assessment: chooseTheDirection,
+        last_name: lastName,
+        first_name: firstName,
+        patronymic: secondName,
+        email: email,
+        phone_number: phone,
+        place_residence: placeResidence,
+        full_name_owner: fullNameOwner,
+        owner_date_death: ownewDateDeath,
+        death_certificate: deathCertificate,
+        vin: vin,
+        model_car: modelCar,
+        year_issue: yearIssue,
+        notarial_place: notarilaPlace,
+        img: image,
+      },
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          Authorization: `Bearer ${loginToken}`,
+        },
+      })
+      .then((res) => {
+        if (res.data.status === 1) {
+          window.localStorage.getItem("login_token");
+          navigate("/form2");
+        }
+        if (res.data.status !== 1) {
+          navigate("/");
+          setOpen(true);
+          notify()
+        }
+      })
+      .catch((err) => {
+        notify(err);
+      });
+  };
+
+  const onLastName = (value) => {
+    console.log(value);
+    setLastName(value);
+  };
+
+  const onFirstName = (value) => {
+    console.log(value);
+    setFirstName(value);
+  };
+
+  const onSecondName = (value) => {
+    console.log(value);
+    setSecondName(value);
+  };
+
+  const onEmail = (value) => {
+    console.log(value);
+    setEmail(value);
+  };
+
+  const onPhone = (value) => {
+    console.log(value);
+    setPhone(value);
+  };
+
+  const onPlaceResidence = (value) => {
+    console.log(value);
+    setPlaceResidence(value);
+  };
+
+  const onOwnerFullName = (value) => {
+    console.log(value);
+    setFullNameOwner(value);
+  };
+
+  const onOwnerDateDeath = (value) => {
+    console.log(value);
+    setOwnerDateDeath(value);
+  };
+
+  const onDeathCertificate = (value) => {
+    console.log(value);
+    setDeathCertificate(value);
+  };
+
+  const onVin = (value) => {
+    console.log(value);
+    setVin(value);
+  };
+
+  const onModalCar = (value) => {
+    console.log(value);
+    setModelCar(value);
+  };
+
+  const onYearIssue = (value) => {
+    console.log(value);
+    setYearIssue(value);
+  };
+
+  const onNotarialPlace = (value) => {
+    console.log(value);
+    setNotarialPlace(value);
+  };
+
+  // form1 end
+
+  // function handleChange(e) {
+  //   console.log(e.target.files);
+  //   setFile(URL.createObjectURL(e.target.files[0]));
+  // }
+
+  useEffect(() => {
     if (
       !localStorage.getItem("login_token") &&
       !localStorage.getItem("token")
     ) {
-      navigate("/profile2");
+      navigate("/");
     }
-  }, []);
+  }, [loginToken]);
 
   return (
     <>
@@ -65,7 +203,8 @@ const Form1 = () => {
                       type="radio"
                       id="inheritance"
                       name="radios"
-                      value="Для получения наследства"
+                      value={1}
+                      onChange={(e) => setChooseTheDirection(e.target.value)}
                     />
                     <label htmlFor="inheritance" className="radio-label">
                       Для получения наследства
@@ -76,7 +215,8 @@ const Form1 = () => {
                       type="radio"
                       id="devide"
                       name="radios"
-                      value="Для раздела имущества"
+                      value={2}
+                      onChange={(e) => setChooseTheDirection(e.target.value)}
                     />
                     <label htmlFor="devide" className="radio-label">
                       Для раздела имущества
@@ -87,7 +227,8 @@ const Form1 = () => {
                       type="radio"
                       id="money"
                       name="radios"
-                      value="Для получения"
+                      value={3}
+                      onChange={(e) => setChooseTheDirection(e.target.value)}
                     />
                     <label htmlFor="money" className="radio-label">
                       Для получения
@@ -109,6 +250,8 @@ const Form1 = () => {
                         placeholder={"Петров"}
                         descValue={"uft_pole_name"}
                         question={false}
+                        onGetValue={onLastName}
+                        value={lastName}
                       />
                       <Input
                         labelName={"Имя"}
@@ -117,6 +260,8 @@ const Form1 = () => {
                         placeholder={"Максим"}
                         descValue={"uft_pole_name"}
                         question={false}
+                        onGetValue={onFirstName}
+                        value={firstName}
                       />
                       <Input
                         labelName={"Отчество"}
@@ -125,6 +270,8 @@ const Form1 = () => {
                         placeholder={"Александрович"}
                         descValue={"uft_pole_name"}
                         question={false}
+                        onGetValue={onSecondName}
+                        value={secondName}
                       />
                     </div>
                     <div className="inputs-top">
@@ -135,6 +282,8 @@ const Form1 = () => {
                         placeholder={"example@gmail.com"}
                         descValue={"uft_pole_name"}
                         question={true}
+                        onGetValue={onEmail}
+                        value={email}
                       />
                       <Input
                         labelName={"Номер телефона"}
@@ -143,6 +292,8 @@ const Form1 = () => {
                         placeholder={"+7 (900) 000-00-00"}
                         descValue={"Этот номер телефона уже используется"}
                         question={false}
+                        onGetValue={onPhone}
+                        value={phone}
                       />
                       <Input
                         labelName={"Место проживания"}
@@ -151,6 +302,8 @@ const Form1 = () => {
                         placeholder={"Москва, Липецкая область"}
                         descValue={"uft_pole_name"}
                         question={true}
+                        onGetValue={onPlaceResidence}
+                        value={placeResidence}
                       />
                     </div>
                   </div>
@@ -168,6 +321,8 @@ const Form1 = () => {
                       placeholder={"Иванов Иван Иванович"}
                       descValue={"uft_pole_name"}
                       question={true}
+                      onGetValue={onOwnerFullName}
+                      value={fullNameOwner}
                     />
                     <Input
                       labelName={"Дата смерти собственника"}
@@ -176,6 +331,8 @@ const Form1 = () => {
                       placeholder={"22/12/2020"}
                       descValue={"uft_pole_name"}
                       question={false}
+                      onGetValue={onOwnerDateDeath}
+                      value={ownewDateDeath}
                     />
                     <Input
                       labelName={"Свидетельство о смерти №"}
@@ -184,6 +341,8 @@ const Form1 = () => {
                       placeholder={"СТ №550657"}
                       descValue={"uft_pole_name"}
                       question={false}
+                      onGetValue={onDeathCertificate}
+                      value={deathCertificate}
                     />
                   </div>
                 </div>
@@ -236,6 +395,8 @@ const Form1 = () => {
                       placeholder={"4567890987NG"}
                       descValue={"uft_pole_name"}
                       question={true}
+                      onGetValue={onVin}
+                      value={vin}
                     />
                     <Input
                       labelName={"Марка и модель автомобиля"}
@@ -244,6 +405,8 @@ const Form1 = () => {
                       placeholder={"Пример: ВАЗ (LADA) Priora"}
                       descValue={"uft_pole_name"}
                       question={true}
+                      onGetValue={onModalCar}
+                      value={modelCar}
                     />
                     <Input
                       labelName={"Год выпуска"}
@@ -252,6 +415,8 @@ const Form1 = () => {
                       placeholder={"1950"}
                       descValue={"uft_pole_name"}
                       question={true}
+                      onGetValue={onYearIssue}
+                      value={yearIssue}
                     />
                     <Input
                       labelName={"Место нотариальных действий"}
@@ -260,17 +425,34 @@ const Form1 = () => {
                       placeholder={"Москва, Липецкая область"}
                       descValue={"uft_pole_name"}
                       question={true}
+                      onGetValue={onNotarialPlace}
+                      value={notarilaPlace}
                     />
+                    <input
+                      onChange={(e) => {
+                        // handleChange();
+                        setImage(e.target.value);
+                      }}
+                      value={image}
+                      type="file"
+                      className="file__image__input"
+                    />
+                    <img className="upload__image__file" src={file} />
                   </div>
                 </div>
               </div>
-              <button
-                onClick={() => navigate("/form2")}
-                type="submit"
-                className="form-btn"
-              >
+              <button onClick={onSubmit} type="submit" className="form-btn">
                 Далее
               </button>
+              <Toaster
+                toastOptions={{
+                  style: {
+                    background: "#073ba1",
+                    padding: "16px",
+                    color: "#fff",
+                  },
+                }}
+              />
             </form>
           </div>
         </section>

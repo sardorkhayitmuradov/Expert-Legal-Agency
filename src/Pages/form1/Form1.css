@@ -273,3 +273,34 @@ color: #FFFFFF;
 border-radius: 8px;
 border: none;
 }
+
+.file__image__input{
+  height: 120px;
+  line-height: 120px;
+  cursor: pointer;
+}
+
+input[type=file]::file-selector-button {
+  width: 200px;
+  height: 60px;
+
+  margin-right: 20px;
+  border: none;
+  background: #042668;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+.upload__image__file{
+  width: 100%;
+  height: max-content;
+  position: relative;
+  z-index: 99;
+}

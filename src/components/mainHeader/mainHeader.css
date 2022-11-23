@@ -13,11 +13,6 @@ nav {
   background: #fff;
   box-shadow: 0px 1px 4px rgba(7, 59, 161, 0.1);
   font-family: "Rubik", sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
 }
 
 .main_container {
