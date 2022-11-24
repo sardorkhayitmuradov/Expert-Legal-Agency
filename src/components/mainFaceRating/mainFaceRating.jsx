@@ -11,30 +11,37 @@ import "./mainFaceRating.css";
 import axios from "axios";
 
 const MainFaceRating = () => {
+  const [data, setData] = useState([]);
 
-  // const [orders, setOrders] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://epa.yarbek.uz/api/products/")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  console.log(data.results);
+  
 
-  // useEffect(() => {
-  //   axios
-  //   .get("http://epa.yarbek.uz/api/category/")
-  //   .then((res) => {
-  //     setOrders(res.data);
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
-  // }, []);
+  const filterTypes = (categoryItem) => {
+    const result = data.results.filter((el) => {
+      return (el.name = categoryItem);
+    });
+    console.log(result);
+  };
 
-  // console.log(orders);
 
   const navigate = useNavigate();
   return (
     <>
       <h2 className="rating__title">ЗАКАЗАТЬ ОЦЕНКУ</h2>
-      <div className="rating__nav">
-        <p className="rating__nav__title">Недвижимое имущество</p>
-        <p className="rating__nav__title">Активы и аренда</p>
-        <p className="rating__nav__title">Движимое имущество</p>
+            <div className="rating__nav">
+            <p className="rating__nav__title">Недвижимое имущество</p>
+            <p className="rating__nav__title">Активы и аренда</p>
+            <p className="rating__nav__title">Движимое имущество</p>
       </div>
       <ul className="rating__list">
         <li className="rating__item">
