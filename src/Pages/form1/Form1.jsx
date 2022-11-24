@@ -11,6 +11,7 @@ import ProfileHeader from "../../components/ProfileHeader/ProfileHeader";
 import axios from "axios";
 import { useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import Tooltip from "@mui/material/Tooltip";
 
 const Form1 = ({ setOpen }) => {
   const [file, setFile] = useState();
@@ -35,33 +36,38 @@ const Form1 = ({ setOpen }) => {
   const [yearIssue, setYearIssue] = useState("");
   const [notarilaPlace, setNotarialPlace] = useState("");
   const [image, setImage] = useState("");
+  const [status, setStatus] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://epa.yarbek.uz/api/create/order/", {
-        choose_the_direction_of_assessment: chooseTheDirection,
-        last_name: lastName,
-        first_name: firstName,
-        patronymic: secondName,
-        email: email,
-        phone_number: phone,
-        place_residence: placeResidence,
-        full_name_owner: fullNameOwner,
-        owner_date_death: ownewDateDeath,
-        death_certificate: deathCertificate,
-        vin: vin,
-        model_car: modelCar,
-        year_issue: yearIssue,
-        notarial_place: notarilaPlace,
-        img: image,
-      },
-      {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          Authorization: `Bearer ${loginToken}`,
+      .post(
+        "http://epa.yarbek.uz/api/create/order/",
+        {
+          status: status,
+          choose_the_direction_of_assessment: chooseTheDirection,
+          last_name: lastName,
+          first_name: firstName,
+          patronymic: secondName,
+          email: email,
+          phone_number: phone,
+          place_residence: placeResidence,
+          full_name_owner: fullNameOwner,
+          owner_date_death: ownewDateDeath,
+          death_certificate: deathCertificate,
+          vin: vin,
+          model_car: modelCar,
+          year_issue: yearIssue,
+          notarial_place: notarilaPlace,
+          img: image,
         },
-      })
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            Authorization: `Bearer ${loginToken}`,
+          },
+        }
+      )
       .then((res) => {
         if (res.data.status === 1) {
           window.localStorage.getItem("login_token");
@@ -70,7 +76,7 @@ const Form1 = ({ setOpen }) => {
         if (res.data.status !== 1) {
           navigate("/");
           setOpen(true);
-          notify()
+          notify();
         }
       })
       .catch((err) => {
@@ -204,7 +210,9 @@ const Form1 = ({ setOpen }) => {
                       id="inheritance"
                       name="radios"
                       value={1}
-                      onChange={(e) => setChooseTheDirection(e.target.value)}
+                      onChange={(e) => {
+                        setChooseTheDirection(e.target.value);
+                      }}
                     />
                     <label htmlFor="inheritance" className="radio-label">
                       Для получения наследства
@@ -428,6 +436,7 @@ const Form1 = ({ setOpen }) => {
                       onGetValue={onNotarialPlace}
                       value={notarilaPlace}
                     />
+                    <label>Photo Your Password →</label>
                     <input
                       onChange={(e) => {
                         // handleChange();
@@ -441,9 +450,29 @@ const Form1 = ({ setOpen }) => {
                   </div>
                 </div>
               </div>
-              <button onClick={onSubmit} type="submit" className="form-btn">
-                Далее
-              </button>
+              <div className="checkbox__btn_parent">
+                <Tooltip title="Этот поле является обязательным!">
+                  <div className="status__parent__div">
+                    <input
+                      className="status__radio"
+                      type="checkbox"
+                      value={1}
+                      onChange={(e) => setStatus(e.target.value)}
+                    />
+                    <label className="status__label" htmlFor="#">
+                      Я принимаю все условия пользовательского соглашения
+                    </label>
+                  </div>
+                </Tooltip>
+                <button
+                  disabled={!status}
+                  onClick={onSubmit}
+                  type="submit"
+                  className="form-btn"
+                >
+                  Далее
+                </button>
+              </div>
               <Toaster
                 toastOptions={{
                   style: {
