@@ -1,6 +1,5 @@
 import React from "react";
 import "../../Pages/error/Error.css";
-import MainHeader from "../../components/mainHeader/MainHeader";
 import pgnf from "../../assets/images/main/404.png";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +9,6 @@ const Error = () => {
 
   return (
     <>
-      <MainHeader />
       <div className="error_container">
         <div className="error_card_parent">
           <div className="error_left_card">
