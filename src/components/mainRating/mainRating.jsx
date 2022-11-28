@@ -6,6 +6,7 @@ import gunIcon from "../../assets/images/main/gun.svg";
 import timeIcon from "../../assets/images/main/time.svg";
 import { useNavigate } from "react-router-dom";
 import "./mainRating.css";
+import { Link } from "react-router-dom";
 
 const MainRating = () => {
   const navigate = useNavigate();
@@ -30,12 +31,21 @@ const MainRating = () => {
             </span>
             <div className="rating__item__bottom">
               <p className="rating__item__price">1100₽</p>
-              <button
-                className="rating__item__button"
-                onClick={() => navigate("/form1")}
-              >
-                Заказать &gt;
-              </button>
+              {localStorage.getItem("token") ||
+                  localStorage.getItem("login_token") ? (
+                    <Link to={"/form1"}>
+                      <button className="rating__item__button">
+                        Заказать &gt;
+                      </button>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => navigate("/registration1")}
+                      className="rating__item__button"
+                    >
+                      Заказать &gt;
+                    </button>
+                  )}
             </div>
           </div>
         </li>
@@ -56,12 +66,21 @@ const MainRating = () => {
             </span>
             <div className="rating__item__bottom">
               <p className="rating__item__price">1100₽</p>
-              <button
-                className="rating__item__button"
-                onClick={() => navigate("/form1")}
-              >
-                Заказать &gt;
-              </button>
+              {localStorage.getItem("token") ||
+                  localStorage.getItem("login_token") ? (
+                    <Link to={"/form1/"}>
+                      <button className="rating__item__button">
+                        Заказать &gt;
+                      </button>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => navigate("/registration1")}
+                      className="rating__item__button"
+                    >
+                      Заказать &gt;
+                    </button>
+                  )}
             </div>
           </div>
         </li>
@@ -81,12 +100,21 @@ const MainRating = () => {
             </span>
             <div className="rating__item__bottom">
               <p className="rating__item__price">1100₽</p>
-              <button
-                className="rating__item__button"
-                onClick={() => navigate("/form1")}
-              >
-                Заказать &gt;
-              </button>
+              {localStorage.getItem("token") ||
+                  localStorage.getItem("login_token") ? (
+                    <Link to={"/form1"}>
+                      <button className="rating__item__button">
+                        Заказать &gt;
+                      </button>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => navigate("/registration1")}
+                      className="rating__item__button"
+                    >
+                      Заказать &gt;
+                    </button>
+                  )}
             </div>
           </div>
         </li>
@@ -106,12 +134,21 @@ const MainRating = () => {
             </span>
             <div className="rating__item__bottom">
               <p className="rating__item__price">1100₽</p>
-              <button
-                className="rating__item__button"
-                onClick={() => navigate("/form1")}
-              >
-                Заказать &gt;
-              </button>
+              {localStorage.getItem("token") ||
+                  localStorage.getItem("login_token") ? (
+                    <Link to={"/form1/"}>
+                      <button className="rating__item__button">
+                        Заказать &gt;
+                      </button>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => navigate("/registration1")}
+                      className="rating__item__button"
+                    >
+                      Заказать &gt;
+                    </button>
+                  )}
             </div>
           </div>
         </li>

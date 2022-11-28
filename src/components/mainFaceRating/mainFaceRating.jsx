@@ -21,7 +21,7 @@ const MainFaceRating = () => {
       });
   }
   useEffect(() => {
-    filterData("");
+    filterData();
   }, []);
 
   const navigate = useNavigate();
@@ -71,11 +71,21 @@ const MainFaceRating = () => {
                 </span>
                 <div className="rating__item__bottom">
                   <p className="rating__item__price">{el.price}₽</p>
-                  <Link to={`/form1/${el.id}`}>
-                    <button className="rating__item__button">
+                  {localStorage.getItem("token") ||
+                  localStorage.getItem("login_token") ? (
+                    <Link to={`/form1/${el.id}`}>
+                      <button className="rating__item__button">
+                        Заказать &gt;
+                      </button>
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => navigate("/registration1")}
+                      className="rating__item__button"
+                    >
                       Заказать &gt;
                     </button>
-                  </Link>
+                  )}
                 </div>
               </div>
             </li>
