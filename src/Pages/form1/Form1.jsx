@@ -34,40 +34,40 @@ const Form1 = ({ setOpen }) => {
   const [modelCar, setModelCar] = useState("");
   const [yearIssue, setYearIssue] = useState("");
   const [notarilaPlace, setNotarialPlace] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(null);
   const [status, setStatus] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post(
-        "http://epa.yarbek.uz/api/create/order/",
-        {
-          status: status,
-          choose_the_direction_of_assessment: chooseTheDirection,
-          last_name: lastName,
-          first_name: firstName,
-          patronymic: secondName,
-          email: email,
-          phone_number: phone,
-          place_residence: placeResidence,
-          full_name_owner: fullNameOwner,
-          owner_date_death: ownewDateDeath,
-          death_certificate: deathCertificate,
-          vin: vin,
-          model_car: modelCar,
-          year_issue: yearIssue,
-          notarial_place: notarilaPlace,
-          img: image,
+    const formData = new FormData();
+
+    formData.append("status", status);
+    formData.append("choose_the_direction_of_assessment", chooseTheDirection);
+    formData.append("last_name", lastName);
+    formData.append("first_name", firstName);
+    formData.append("patronymic", secondName);
+    formData.append("email", email);
+    formData.append("phone_number", phone);
+    formData.append("place_residence", placeResidence);
+    formData.append("full_name_owner", fullNameOwner);
+    formData.append("owner_date_death", ownewDateDeath);
+    formData.append("death_certificate", deathCertificate);
+    formData.append("vin", vin);
+    formData.append("model_car", modelCar);
+    formData.append("year_issue", yearIssue);
+    formData.append("notarial_place", notarilaPlace);
+    formData.append("img", image);
+
+    try {
+      const res = axios({
+        url: "http://epa.yarbek.uz/api/create/order/",
+        method: "POST",
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          Authorization: `Bearer ${loginToken}`,
         },
-        {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            Authorization: `Bearer ${loginToken}`,
-          },
-        }
-      )
-      .then((res) => {
+        data: formData,
+      }).then((res) => {
         if (res.data.status === 1) {
           window.localStorage.getItem("login_token");
           navigate("/form2");
@@ -77,10 +77,11 @@ const Form1 = ({ setOpen }) => {
           setOpen(true);
           notify();
         }
-      })
-      .catch((err) => {
-        notify(err);
+        notify();
       });
+    } catch (err) {
+      notify(err);
+    }
   };
 
   const onLastName = (value) => {
@@ -343,42 +344,6 @@ const Form1 = ({ setOpen }) => {
                   </div>
                 </div>
                 <span className="hr"></span>
-                {/* <div className="about-car">
-                  <div className="car-left">
-                    <h3 className="car-left-title">
-                      Запрос информации об автомобиле
-                    </h3>
-                    <p className="car-left-desc">
-                      Вы можете запросить информацию о ТС. Это позволит
-                      автоматически заполнить часть полей об автомобиле.
-                    </p>
-                  </div>
-                  <div className="car-right">
-                    <div className="car-right-top">
-                      <h4 className="right-top-title">
-                        Выберите тип идентификатора
-                      </h4>
-                      <div className="right-top-btns">
-                        <button className="top-btns-btn">VIN</button>
-                        <button className="top-btns-btn">Номер кузова</button>
-                        <button className="top-btns-btn">Гос. номера</button>
-                      </div>
-                    </div>
-                    <div className="car-right-bottom">
-                      <Input
-                        labelName={"VIN"}
-                        inputType={"text"}
-                        inputId={"carVIN"}
-                        placeholder={"4567890987NG"}
-                        descValue={"uft_pole_name"}
-                        question={true}
-                      />
-                      <button className="right-bottom-btn">
-                        Запросить информацию
-                      </button>
-                    </div>
-                  </div>
-                </div> */}
                 <span className="hr"></span>
                 <div className="yourself">
                   <h3 className="yourself-title">Заполнить самостоятельно</h3>
@@ -406,7 +371,7 @@ const Form1 = ({ setOpen }) => {
                     />
                     <Input
                       labelName={"Год выпуска"}
-                      inputType={"number"}
+                      inputType={"date"}
                       inputId={"carYear"}
                       placeholder={"1950"}
                       descValue={"uft_pole_name"}
@@ -427,9 +392,9 @@ const Form1 = ({ setOpen }) => {
                     <label>Photo Your Password →</label>
                     <input
                       onChange={(e) => {
-                        setImage(e.target.value);
+                        setImage(e.target.files[0]);
                       }}
-                      value={image}
+                      required
                       type="file"
                       className="file__image__input"
                     />
