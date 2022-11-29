@@ -30,7 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main open={open} setOpen={setOpen} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/code" element={<Code />} />
+        <Route path="/code" element={<Code setOpen={setOpen} />} />
         <Route path="/emailcode" element={<CodeEmail />} />
         <Route path="/email" element={<Email />} />
         <Route path="/form1" element={<Form1 setOpen={setOpen} />} />

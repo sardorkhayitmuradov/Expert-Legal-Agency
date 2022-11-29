@@ -15,7 +15,7 @@ const Main = ({ open, setOpen }) => {
   return (
     <>
       <header className="header">
-       {window.localStorage.getItem("token") || window.localStorage.getItem("login_token") ? (
+       {window.localStorage.getItem("login_token") ? (
         <ProfileHeader/>
        ):(
         <MainHeader open={open} setOpen={setOpen} />

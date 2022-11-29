@@ -73,7 +73,7 @@ const MainFaceRating = () => {
                   <p className="rating__item__price">{el.price}₽</p>
                   {localStorage.getItem("token") ||
                   localStorage.getItem("login_token") ? (
-                    <Link to={`/form1/${el.id}`}>
+                    <Link to={"/form1/"}>
                       <button className="rating__item__button">
                         Заказать &gt;
                       </button>

@@ -6,14 +6,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 // import {Context as NumberContext} from '../../Context/phoneNumber/phoneNumber'
 
-const Code = () => {
+const Code = ({ setOpen }) => {
   const navigate = useNavigate();
-  const phoneNumber = window.localStorage.getItem('phone_number');
+  const phoneNumber = window.localStorage.getItem("phone_number");
 
-  const [code, setCode] = useState(new Array(5).fill(''));
+  const [code, setCode] = useState(new Array(5).fill(""));
 
-  const onCodes =(el,index)=> {
-
+  const onCodes = (el, index) => {
     if (isNaN(el.value)) return false;
 
     setCode([...code.map((d, idx) => (idx === index ? el.value : d))]);
@@ -22,30 +21,34 @@ const Code = () => {
     if (el.nextSibling) {
       el.nextSibling.focus();
     }
+  };
 
-  }
-  
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://epa.yarbek.uz/api/code/', {
-        sms_code: code.join(""),
-        phone_number: phoneNumber,
-      },{
-        headers: {
-          "Access-Control-Allow-Origin": "*",
+      .post(
+        "http://epa.yarbek.uz/api/code/",
+        {
+          sms_code: code.join(""),
+          phone_number: phoneNumber,
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
         }
-      })
+      )
       .then((res) => {
-        if(res.data){
+        if (res.data) {
           console.log(res.data.status === 1);
-          navigate('/profile2') 
+          navigate("/");
+          setOpen(true);
         }
       })
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
 
   React.useEffect(() => {
     if (!localStorage.getItem("token")) {
@@ -63,16 +66,11 @@ const Code = () => {
           <form className="code_card_titles" onSubmit={onSubmit}>
             <h1>Подтверждение</h1>
             <p>
-              Мы вышлем на <span>{phoneNumber}</span> бесплатное SMS с
-              кодом
+              Мы вышлем на <span>{phoneNumber}</span> бесплатное SMS с кодом
             </p>
             <p>Код из SMS</p>
             <CodeInput onGetCodes={onCodes} code={code} />
-            <button
-              className="code_card_btn"
-            >
-              Далее
-            </button>
+            <button className="code_card_btn">Далее</button>
           </form>
         </div>
       </div>

@@ -14,7 +14,6 @@ import toast, { Toaster } from "react-hot-toast";
 import Tooltip from "@mui/material/Tooltip";
 
 const Form1 = ({ setOpen }) => {
-  const [file, setFile] = useState();
   const notify = () => toast("Oops! Something get wrong! Please again...");
   const [loginToken, setLoginToken] = useState(
     window.localStorage.getItem("login_token")
@@ -149,26 +148,15 @@ const Form1 = ({ setOpen }) => {
     setNotarialPlace(value);
   };
 
-  // form1 end
-
-  // function handleChange(e) {
-  //   console.log(e.target.files);
-  //   setFile(URL.createObjectURL(e.target.files[0]));
-  // }
-
   useEffect(() => {
-    if (
-      !localStorage.getItem("login_token") &&
-      !localStorage.getItem("token")
-    ) {
+    if (!localStorage.getItem("login_token")) {
       navigate("/");
     }
   }, [loginToken]);
 
   return (
     <>
-      {!localStorage.getItem("token") &&
-      !localStorage.getItem("login_token") ? (
+      {!localStorage.getItem("login_token") ? (
         <MainHeader />
       ) : (
         <ProfileHeader />
@@ -355,7 +343,7 @@ const Form1 = ({ setOpen }) => {
                   </div>
                 </div>
                 <span className="hr"></span>
-                <div className="about-car">
+                {/* <div className="about-car">
                   <div className="car-left">
                     <h3 className="car-left-title">
                       Запрос информации об автомобиле
@@ -390,7 +378,7 @@ const Form1 = ({ setOpen }) => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <span className="hr"></span>
                 <div className="yourself">
                   <h3 className="yourself-title">Заполнить самостоятельно</h3>
@@ -439,14 +427,12 @@ const Form1 = ({ setOpen }) => {
                     <label>Photo Your Password →</label>
                     <input
                       onChange={(e) => {
-                        // handleChange();
                         setImage(e.target.value);
                       }}
                       value={image}
                       type="file"
                       className="file__image__input"
                     />
-                    <img className="upload__image__file" src={file} />
                   </div>
                 </div>
               </div>
